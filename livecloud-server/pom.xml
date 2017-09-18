@@ -5,11 +5,11 @@
 	<modelVersion>4.0.0</modelVersion>
 	<parent>
 		<groupId>com.yonyou.live</groupId>
-		<artifactId>broadcast-parent</artifactId>
+		<artifactId>livecloud-parent</artifactId>
 		<version>0.0.1-SNAPSHOT</version>
 	</parent>
-	<artifactId>broadcast-server</artifactId>
-	<name>broadcast-server</name>
+	<artifactId>livecloud-server</artifactId>
+	<name>livecloud-server</name>
 	<packaging>war</packaging>
 
 	<properties>
@@ -269,7 +269,7 @@
 	</dependencies>
 
 	<build>
-		<finalName>broadcast-server</finalName>
+		<finalName>livecloud-server</finalName>
 		<resources>
 			<resource>
 				<directory>resources</directory>
@@ -282,7 +282,7 @@
 				<artifactId>maven-war-plugin</artifactId>
 				<version>2.6</version>
 				<configuration>
-					<warName>broadcast-server</warName>
+					<warName>livecloud-server</warName>
 					<webResources>
 						<resource>
 							<filtering>true</filtering>

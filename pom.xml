@@ -2,15 +2,15 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.yonyou.live</groupId>
-  <artifactId>broadcast-parent</artifactId>
+  <artifactId>livecloud-parent</artifactId>
   <version>0.0.1-SNAPSHOT</version>
   <packaging>pom</packaging>
    <modules>
-   	<module>broadcast-sdk</module>
-	<module>broadcast-service</module>
-	<module>broadcast-server</module>
+   	<module>livecloud-sdk</module>
+	<module>livecloud-service</module>
+	<module>livecloud-server</module>
   </modules>
-  <name>broadcast-parent</name>
+  <name>livecloud-parent</name>
   
   <build>
 		<defaultGoal>compile</defaultGoal>

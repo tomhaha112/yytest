@@ -5,13 +5,13 @@
 	<modelVersion>4.0.0</modelVersion>
 	<parent>
 		<groupId>com.yonyou.live</groupId>
-		<artifactId>broadcast-parent</artifactId>
+		<artifactId>livecloud-parent</artifactId>
 		<version>0.0.1-SNAPSHOT</version>
 	</parent>
 	<groupId>com.yonyou.live</groupId>
-	<artifactId>broadcast-service</artifactId>
+	<artifactId>livecloud-service</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>broadcast-service</name>
+	<name>livecloud-service</name>
 	<url>http://maven.apache.org</url>
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -21,7 +21,7 @@
 
 		<dependency>
 			<groupId>com.yonyou.live</groupId>
-			<artifactId>broadcast-sdk</artifactId>
+			<artifactId>livecloud-sdk</artifactId>
 			<version>0.0.1-SNAPSHOT</version>
 		</dependency>
 
