@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.yonyou.live.broadcast.dao.LiveAuthDao">
+	<resultMap id="BaseResultMap"
+		type="com.yonyou.live.broadcast.sdk.model.LiveAuthEntity">
+		<id column="id" jdbcType="INTEGER" property="id" />
+		<result column="appcloudId" jdbcType="VARCHAR" property="appcloudId" />
+		<result column="privatekey" jdbcType="VARCHAR" property="privatekey" />
+		<result column="createtime" jdbcType="TIMESTAMP" property="createtime" />
+		<result column="endtime" jdbcType="TIMESTAMP" property="endtime" />
+		<result column="openstate" jdbcType="INTEGER" property="openstate" />
+	</resultMap>
+	
+	
+	<sql id="Base_Column_List">
+		id, appcloudId, privatekey, createtime, 
+		endtime, openstate
+	</sql>
+	
+	<select id="getAuthByappId" parameterType="String"
+		resultMap="BaseResultMap">
+	    select
+		<include refid="Base_Column_List" />
+		from live_auth
+		<where>
+		 appcloudId = #{appcloudId,jdbcType=VARCHAR}
+		 and endtime > #{currentTime,jdbcType=TIMESTAMP}
+		</where>
+	</select>
+</mapper>

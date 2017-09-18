@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>com.yonyou.live</groupId>
+  <artifactId>broadcast-parent</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  <packaging>pom</packaging>
+   <modules>
+   	<module>broadcast-sdk</module>
+	<module>broadcast-service</module>
+	<module>broadcast-server</module>
+  </modules>
+  <name>broadcast-parent</name>
+  
+  <build>
+		<defaultGoal>compile</defaultGoal>
+    	<resources> 
+	      <resource> 
+	        <directory>src/main/java</directory> 
+	        <includes> 
+	          <include>**/*.xml</include> 
+	        </includes> 
+	        <filtering>false</filtering> 
+      		</resource> 
+   		</resources> 
+		<pluginManagement>
+			<plugins>
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-compiler-plugin</artifactId>
+					<configuration>
+						<source>1.8</source>
+						<target>1.8</target>
+						<encoding>UTF-8</encoding>
+					</configuration>
+				</plugin>
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-javadoc-plugin</artifactId>
+					<version>2.9.1</version>
+					<configuration>
+						<aggregate>true</aggregate><!--多模块时配置为true -->
+						<useStandardDocletOptions>true</useStandardDocletOptions>
+						<charset>UTF-8</charset>
+						<encoding>UTF-8</encoding>
+						<docencoding>UTF-8</docencoding>
+					</configuration>
+					<executions>
+						<execution>
+							<phase>package</phase>
+							<goals>
+								<goal>javadoc</goal>
+							</goals>
+						</execution>
+					</executions>
+				</plugin>
+			</plugins>
+		</pluginManagement>
+	</build>
+</project>
