@@ -1,9 +1,6 @@
 package com.yonyou.live.broadcast.controller;
 
-import java.io.IOException;
-
 import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
 
 import org.apache.commons.lang3.StringUtils;
 import org.slf4j.Logger;
@@ -22,7 +19,6 @@ import com.yonyou.live.broadcast.sdk.model.LiveTenantEntity;
 import com.yonyou.live.broadcast.sdk.remote.service.LiveService;
 import com.yonyou.live.broadcast.sdk.service.LiveRoomService;
 import com.yonyou.live.broadcast.util.MD5Utils;
-import com.yonyou.yht.utils.JsonResponse;
 
 @RestController
 @RequestMapping(value = "/admin/l")
@@ -45,18 +41,22 @@ public class LiveAdminController {
 	 * @param response
 	 * @return
 	 */
-	@RequestMapping(value = "/getliveAdmin", method = RequestMethod.POST)
-	public JsonResponse createLiveAdmin(HttpServletRequest request,HttpServletResponse response) {
-		JsonResponse result = new JsonResponse();
+	@RequestMapping(value = "/getliveAdmin", method = RequestMethod.GET)
+	public String createLiveAdmin(HttpServletRequest request,String callback) {
+		JSONObject result = new JSONObject();
 		String userId = request.getParameter("userId");
 		String tenantId = request.getParameter("tenantId");
 		if(StringUtils.isEmpty(userId) || StringUtils.isEmpty(tenantId)){
-			return result.failedWithReturn("参数为空");
+			result.put("code", 1);
+			result.put("msg", "参数错误");
+			return callback+"("+result+")";
 		}
 		String appCloudId = httpRequestContextHolder.getHttpRequestContext().getCloudId();
 		ServiceResult<LiveTenantEntity> liveResult = liveRoomService.getLiveRoomByTenant(tenantId,appCloudId,userId);
 		if(!liveResult.isSuccess()){
-			return result.failedWithReturn("该用户没有权限");
+			result.put("code", 1);
+			result.put("msg", "您不是租户管理员，没有权限访问");
+			return callback+"("+result+")";
 		}
 		String vZanServer = PropertyUtil.getPropertyByKey("vzan.server.url");
 		String liveUrl = vZanServer + "/VZLive/GetBackstage";
@@ -67,28 +67,26 @@ public class LiveAdminController {
 			httpResult = liveService.getLiveAdmin(liveUrl, sign, currentTime, userId);
 		} catch (ServiceException e) {
 			logger.error(e.getMessage());
-			return result.failedWithReturn("请求失败");
+			result.put("code", 1);
+			result.put("msg", "服务异常");
+			return callback+"("+result+")";
 		}
 		JSONObject resultJSON = (JSONObject) JSONObject.parse(httpResult);
 		if (resultJSON.getBoolean("isok") != null && resultJSON.getBoolean("isok")) {
 			String cookieValue = resultJSON.getJSONObject("dataObj").getString("userId");
 			String redirectUrl = resultJSON.getString("Msg");
-			JSONObject data = new JSONObject();
-			data.put("userId", cookieValue);
-			data.put("liveUrl", redirectUrl);
-			result.successWithData("data", data);
+			result.put("code", 0);
+			result.put("userId", cookieValue);
+			result.put("liveUrl", redirectUrl);
+			return callback+"("+result+")";
 		}else {
 			if (StringUtils.isNotEmpty(resultJSON.getString("code"))
 					&& StringUtils.isNotEmpty(resultJSON.getString("Msg"))) {
 				logger.error("进入直播管理界面错误:" + resultJSON.getString("code") + "\br" + "错误信息:" + resultJSON.getString("Msg"));
 			}
-			try {
-				 response.sendRedirect("www.baidu.com");
-			} catch (IOException e) {
-				logger.error("重定向异常");
-			}
-			result.failedWithReturn(resultJSON.getString("Msg"));
+			result.put("code", 1);
+			result.put("msg", resultJSON.getString("Msg"));
+			return callback+"("+result+")";
 		}
-		return result;
 	}
 }
