@@ -8,9 +8,7 @@
 		<artifactId>livecloud-parent</artifactId>
 		<version>0.0.1-SNAPSHOT</version>
 	</parent>
-	<groupId>com.yonyou.live</groupId>
 	<artifactId>livecloud-service</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
 	<name>livecloud-service</name>
 	<url>http://maven.apache.org</url>
 	<properties>

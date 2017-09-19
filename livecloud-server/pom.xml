@@ -120,7 +120,7 @@
 
 		<dependency>
 			<groupId>com.yonyou.live</groupId>
-			<artifactId>broadcast-service</artifactId>
+			<artifactId>livecloud-service</artifactId>
 			<version>0.0.1-SNAPSHOT</version>
 		</dependency>
 
