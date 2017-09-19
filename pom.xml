@@ -9,6 +9,7 @@
    	<module>livecloud-sdk</module>
 	<module>livecloud-service</module>
 	<module>livecloud-server</module>
+	<module>live-sdk</module>
   </modules>
   <name>livecloud-parent</name>
   

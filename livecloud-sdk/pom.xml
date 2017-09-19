@@ -7,7 +7,6 @@
     <artifactId>livecloud-parent</artifactId>
     <version>0.0.1-SNAPSHOT</version>
   </parent>
-  <groupId>com.yonyou.live</groupId>
   <artifactId>livecloud-sdk</artifactId>
   <packaging>jar</packaging>
   <properties>
