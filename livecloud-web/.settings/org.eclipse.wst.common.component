@@ -6,6 +6,9 @@
         <dependent-module archiveName="live-sdk-0.0.1-SNAPSHOT.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/live-sdk/live-sdk">
             <dependency-type>uses</dependency-type>
         </dependent-module>
+        <dependent-module archiveName="sdk-0.0.1-SNAPSHOT.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/sdk/sdk">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
         <property name="context-root" value="livecloud-web"/>
         <property name="java-output-path" value="/livecloud-web/target/classes"/>
     </wb-module>
