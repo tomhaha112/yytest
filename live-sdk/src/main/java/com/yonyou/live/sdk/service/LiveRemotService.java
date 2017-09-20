@@ -29,9 +29,11 @@ public interface LiveRemotService {
 			@ParamAttr(location = ParamAttr.Location.JSON_CONTENT, paramKey = "tenantId") final String tenantId)
 			throws ServiceException;
 	
-	@OpenAPI(httpMethod = OpenAPI.HttpMethod.POST, uriPath = "/livecloud-server/service/l/getliveAdmin", resultJsonKey = "",resultErrCodeKey="",resultErrMsgKey="")
-	void liveManage(
+	@OpenAPI(httpMethod = OpenAPI.HttpMethod.GET, uriPath = "/livecloud-server/admin/l/getliveAdmin", resultJsonKey = "",resultErrCodeKey="",resultErrMsgKey="")
+	String liveManage(
 			@ParamAttr(location = ParamAttr.Location.URL, paramKey = "userId") final String userId,
+			@ParamAttr(location = ParamAttr.Location.URL, paramKey = "appId") final String appId,
+			@ParamAttr(location = ParamAttr.Location.URL, paramKey = "callback") final String callback,
 			@ParamAttr(location = ParamAttr.Location.URL, paramKey = "tenantId") final String tenantId)
 			throws ServiceException;
 }

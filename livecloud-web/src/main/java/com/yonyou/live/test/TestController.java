@@ -92,12 +92,15 @@ public class TestController {
 	 * @return
 	 */
 	@RequestMapping(value = "/getLiveAdmin", method = RequestMethod.GET)
-	public void redrictLive(String userId,String tenantId) {
+	public String redrictLive(String userId,String tenantId,String appId) {
+		String result = null;
 		try {
-		  liveService.liveManage(userId, tenantId);
+		 String callback = "callback";
+		 result =  liveService.liveManage(userId,appId,callback, tenantId);
 		} catch (ServiceException e) {
 			e.printStackTrace();
 		}
+		return result;
 	}
 	
 }
