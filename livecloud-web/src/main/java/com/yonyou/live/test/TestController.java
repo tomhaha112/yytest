@@ -39,7 +39,7 @@ public class TestController {
 	
 	
 	/**
-	 * 获取直播列表
+	 * 获取直播话题
 	 * @return
 	 */
 	@RequestMapping(value = "/getlive", method = RequestMethod.GET)
@@ -58,7 +58,7 @@ public class TestController {
 	
 	
 	/**
-	 * 获取直播列表
+	 * 创建直播间
 	 * @return
 	 */
 	@RequestMapping(value = "/create", method = RequestMethod.GET)
@@ -88,7 +88,7 @@ public class TestController {
 	
 	
 	/**
-	 * 获取直播列表
+	 * 跳转直播管理界面
 	 * @return
 	 */
 	@RequestMapping(value = "/getLiveAdmin", method = RequestMethod.GET)

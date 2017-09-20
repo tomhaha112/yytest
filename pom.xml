@@ -11,7 +11,8 @@
 	<module>livecloud-server</module>
 	<module>live-sdk</module>
 	<module>livecloud-web</module>
-   </modules>
+    <module>live-yonyoucloud</module>
+  </modules>
   <name>livecloud-parent</name>
   
   <build>

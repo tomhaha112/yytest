@@ -5,7 +5,7 @@
 	version="2.5">
 	<context-param>
 		<param-name>webAppRootKey</param-name>
-		<param-value>livecloud-web</param-value>
+		<param-value>live-yonyoucloud</param-value>
 	</context-param>
 	<context-param>
 		<param-name>contextConfigLocation</param-name>
