@@ -288,7 +288,7 @@
 							<filtering>true</filtering>
 							<directory>src/main/webapp</directory>
 							<includes>
-								<include>**/web.xml</include>
+								<include>**/*</include>
 							</includes>
 						</resource>
 					</webResources>
