@@ -319,9 +319,6 @@
 		<!-- 本地环境配置 -->
 		<profile>
 			<id>real</id>
-			<activation>
-				<activeByDefault>true</activeByDefault>
-			</activation>
 			<properties>
 				<env>real</env>
 			</properties>
@@ -334,9 +331,6 @@
 		<!-- 本地环境配置 -->
 		<profile>
 			<id>test</id>
-			<activation>
-				<activeByDefault>true</activeByDefault>
-			</activation>
 			<properties>
 				<env>test</env>
 			</properties>
