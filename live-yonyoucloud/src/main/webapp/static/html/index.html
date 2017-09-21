@@ -1,0 +1,42 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <link href="../styles/bootstrap.min.css" rel="stylesheet" type="text/css">
+        <link href="../styles/animate.css" rel="stylesheet" type="text/css">
+        <script src="../scripts/jquery-3.2.1.js"></script>
+        <script src="../scripts/bootstrap.min.js"></script>
+        <script src="../scripts/vue.js"></script>
+        <title>首页</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    </head>
+    <body>
+        <div class="container-fluid">
+            <header>
+                <div class="row">
+                    <div class="col-xs-7">
+                        <i class=""></i><span>图标填充</span>
+                    </div>
+                    <div class="col-xs-2">
+                        <a href="#"><button class="btn btn-primary">登录</button></a>
+                    </div>
+                    <div class="col-xs-2">
+                        <a href="#"><button class="btn btn-primary">注册</button></a>
+                    </div>
+                    <div class="col-xs-1"></div>
+                </div>        
+            </header>
+            
+            <nav>
+                <ul id="list" class="row" style="list-style: none">
+                    <li v-for="(item,index) in items" class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
+                        <a v-bind:href="item.linkaddress">{{ parentMessage }}--{{ index }}-{{ item.a }}-{{ item.b }}--{{item.linkname}}</a>
+                    </li>
+                </ul>
+            </nav>
+            
+            <footer>
+            </footer>
+        </div>
+      <script src="../scripts/main.js"></script>  
+    </body>
+</html>
