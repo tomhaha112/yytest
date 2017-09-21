@@ -86,19 +86,4 @@ public class LiveController {
 		return result;
 	}
 	
-	
-	/**
-	 * 跳转直播管理界面
-	 * @return
-	 */
-	@RequestMapping(value = "/getLiveAdmin", method = RequestMethod.GET)
-	public String redrictLive(String userId,String tenantId,HttpServletResponse reponse) {
-		try {
-		  liveService.liveManage(userId, tenantId);
-//		  return "redirect:/http://www.baidu.com";
-		} catch (ServiceException e) {
-			e.printStackTrace();
-		}
-		return tenantId;
-	}
 }

@@ -86,21 +86,4 @@ public class TestController {
 		return result;
 	}
 	
-	
-	/**
-	 * 跳转直播管理界面
-	 * @return
-	 */
-	@RequestMapping(value = "/getLiveAdmin", method = RequestMethod.GET)
-	public String redrictLive(String userId,String tenantId,String appId) {
-		String result = null;
-		try {
-		 String callback = "callback";
-		 result =  liveService.liveManage(userId,appId,callback, tenantId);
-		} catch (ServiceException e) {
-			e.printStackTrace();
-		}
-		return result;
-	}
-	
 }

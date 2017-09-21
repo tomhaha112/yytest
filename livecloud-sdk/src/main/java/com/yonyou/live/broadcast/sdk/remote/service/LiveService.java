@@ -14,6 +14,7 @@ public interface LiveService {
 	String getLives(
 			@ParamAttr(location = ParamAttr.Location.RUNTIME_URIPATH, paramKey = "callbackuri") final String callbackuri,
 			@ParamAttr(location = ParamAttr.Location.URL, paramKey = "sign") final String sign,
+			@ParamAttr(location = ParamAttr.Location.URL, paramKey = "zbid") final String zbid,
 			@ParamAttr(location = ParamAttr.Location.URL, paramKey = "pindex") final int pindex,
 			@ParamAttr(location = ParamAttr.Location.URL, paramKey = "psize") final int psize,
 			@ParamAttr(location = ParamAttr.Location.URL, paramKey = "timestamp") final Long timestamp)
