@@ -29,22 +29,4 @@
         </property>
     </bean>
     
-    <bean id="sessionRedisPool" class="com.yonyou.iuap.cache.redis.RedisPoolFactory"
-          scope="prototype" factory-method="createJedisPool">
-        <constructor-arg>
-            <value><![CDATA[${pom.redis.session.url}]]></value>
-        </constructor-arg>
-    </bean>
-    
-	<bean id="sessionJedisTemplate" class="org.springside.modules.nosql.redis.JedisTemplate">
-		<constructor-arg ref="sessionRedisPool"></constructor-arg>
-	</bean>    
-	
-    <!-- 友互通会话数据缓存 -->
-	<bean id="yht_cacheManager" class="com.yonyou.yht.cache.CacheManager">
-    	<property name="jedisTemplate" ref="sessionJedisTemplate" />
-    	<property name="sessionTimeout" value="3600" />
-	</bean>  
-    
-    
 </beans>
