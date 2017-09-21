@@ -11,6 +11,12 @@
         <dependent-module archiveName="livecloud-sdk-0.0.1-SNAPSHOT.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/livecloud-sdk/livecloud-sdk">
             <dependency-type>uses</dependency-type>
         </dependent-module>
+        <dependent-module archiveName="sdk-0.0.1-SNAPSHOT.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/sdk/sdk">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="basics-0.0.1-SNAPSHOT.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/basics/basics">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
         <property name="java-output-path" value="/livecloud-server/target/classes"/>
         <property name="context-root" value="livecloud-server"/>
     </wb-module>

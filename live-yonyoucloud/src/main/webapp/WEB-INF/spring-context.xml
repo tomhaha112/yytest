@@ -28,4 +28,7 @@
             </list>
         </property>
     </bean>
+    
+    <!-- 开启驱动器注解 -->
+    <mvc:annotation-driven />
 </beans>

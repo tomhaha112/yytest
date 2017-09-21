@@ -91,6 +91,10 @@
 					<groupId>commons-collections</groupId>
 					<artifactId>commons-collections</artifactId>
 				</exclusion>
+				<exclusion>
+					<artifactId>xml-resolver</artifactId>
+					<groupId>xml-resolver</groupId>
+				</exclusion>
 			</exclusions>
 		</dependency>
 		<!--集成友户通登录需要 -->
@@ -132,6 +136,18 @@
 					<!-- declare the exclusion here -->
 					<groupId>xom</groupId>
 					<artifactId>xom</artifactId>
+				</exclusion>
+				<exclusion>
+					<artifactId>log4jdbc</artifactId>
+					<groupId>com.googlecode.log4jdbc</groupId>
+				</exclusion>
+				<exclusion>
+					<artifactId>logback-classic</artifactId>
+					<groupId>ch.qos.logback</groupId>
+				</exclusion>
+				<exclusion>
+					<artifactId>logback-core</artifactId>
+					<groupId>ch.qos.logback</groupId>
 				</exclusion>
 			</exclusions>
 		</dependency>
