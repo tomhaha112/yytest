@@ -40,14 +40,14 @@ public class LiveController {
 	private HttpRequestContextHolder httpRequestContextHolder;
 	
 	/**
-	 * 鑾峰彇鐩存挱鍒楄〃
+	 * 获取直播列表
 	 * @return
 	 */
 	@RequestMapping(value = "/getlives", method = RequestMethod.POST)
 	public JsonResponse getAllLives(String zbid) {
 		JsonResponse result = new JsonResponse();
 		if (StringUtils.isEmpty(zbid)) {
-			return result.failedWithReturn("鍙傛暟涓虹┖");
+			return result.failedWithReturn("参数为空");
 		}
 		String vZanServer = PropertyUtil.getPropertyByKey("vzan.server.url");
 		String livesUrl = vZanServer + "/VZLive/GetLiveList";
@@ -58,10 +58,10 @@ public class LiveController {
 			httpResult = liveService.getLives(livesUrl, sign, zbid,1, 10, currentTime);
 		} catch (ServiceException e) {
 			logger.error(e.getMessage());
-			return result.failedWithReturn("璇锋眰澶辫触");
+			return result.failedWithReturn("请求失败");
 		}
 		if (StringUtils.isEmpty(httpResult)) {
-			return result.failedWithReturn("璇锋眰澶辫触");
+			return result.failedWithReturn("请求失败");
 		}
 		JSONArray lives = (JSONArray) JSONArray.parse(httpResult);
 		result.successWithData("data", lives);
@@ -69,7 +69,7 @@ public class LiveController {
 	}
 
 	/**
-	 * 鑾峰彇璇濋
+	 * 获取直播话题
 	 * @param liveid
 	 * @return
 	 */
@@ -77,7 +77,7 @@ public class LiveController {
 	public JsonResponse getlive(String liveid) {
 		JsonResponse result = new JsonResponse();
 		if (StringUtils.isEmpty(liveid)) {
-			return result.failedWithReturn("鍙傛暟涓虹┖");
+			return result.failedWithReturn("参数为空");
 		}
 		String vZanServer = PropertyUtil.getPropertyByKey("vzan.server.url");
 		String liveUrl = vZanServer + "/VZLive/GetLiveModel";
@@ -88,10 +88,10 @@ public class LiveController {
 			httpResult = liveService.getLiveById(liveUrl, sign, currentTime, liveid);
 		} catch (ServiceException e) {
 			logger.error(e.getMessage());
-			return result.failedWithReturn("璇锋眰澶辫触");
+			return result.failedWithReturn("请求失败");
 		}
 		if (StringUtils.isEmpty(httpResult)) {
-			return result.failedWithReturn("璇锋眰澶辫触");
+			return result.failedWithReturn("请求失败");
 		}
 		JSONObject resultJSON = (JSONObject) JSONObject.parse(httpResult);
 		if (resultJSON.getBoolean("isok") != null && resultJSON.getBoolean("isok")) {
@@ -99,7 +99,7 @@ public class LiveController {
 		} else {
 			if (StringUtils.isNotEmpty(resultJSON.getString("code"))
 					&& StringUtils.isNotEmpty(resultJSON.getString("Msg"))) {
-				logger.error("鏌ヨ寰禐杩斿洖鐮�:" + resultJSON.getString("code") + "\br" + "閿欒淇℃伅:" + resultJSON.getString("Msg"));
+				logger.error("查询微赞返回码:" + resultJSON.getString("code") + "\br" + "错误信息:" + resultJSON.getString("Msg"));
 			}
 			result.failedWithReturn(resultJSON.getString("Msg"));
 		}
@@ -122,15 +122,15 @@ public class LiveController {
 		String sitename = json.getString("sitename");
 		String tenantId = json.getString("tenantId");
 		if(StringUtils.isAnyEmpty(new String[]{userId,nickname,sitename,headimg,sitelogo,tenantId})){
-			return result.failedWithReturn("鍙傛暟鏈夎");
+			return result.failedWithReturn("参数有误");
 		}
 		String tenantResult = com.yonyou.iuap.tenant.sdk.UserCenter.isAdminNew(tenantId, userId);
 //		String headimg = com.yonyou.iuap.tenant.sdk.UserCenter.getUserAvatar(userId)
 		if(StringUtils.isEmpty(tenantResult)){
-			return result.failedWithReturn("绉熸埛鏌ヨ寮傚父");
+			return result.failedWithReturn("租户查询异常");
 		}
 		if(StringUtils.equals(JSONObject.parseObject(tenantResult).getString("flag"), "0")){
-			return result.failedWithReturn("璇ョ敤鎴锋病鏈夋潈闄�");
+			return result.failedWithReturn("该用户没有权限");
 		}
 		String vZanServer = PropertyUtil.getPropertyByKey("vzan.server.url");
 		String liveUrl = vZanServer + "/VZLive/CreateSite";
@@ -141,7 +141,7 @@ public class LiveController {
 			httpResult = liveService.createSite(liveUrl, sign, currentTime, userId, sitename, headimg, sitelogo,nickname);
 		} catch (ServiceException e) {
 			logger.error(e.getMessage());
-			return result.failedWithReturn("璇锋眰澶辫触");
+			return result.failedWithReturn("请求失败");
 		}
 		JSONObject resultJSON = (JSONObject) JSONObject.parse(httpResult);
 		if (resultJSON.getBoolean("isok") != null && resultJSON.getBoolean("isok")) {
@@ -157,7 +157,7 @@ public class LiveController {
 			result.successWithData("data", resultJSON.get("Msg"));
 		}else {
 			if (StringUtils.isNotEmpty(resultJSON.getString("code")) && StringUtils.isNotEmpty(resultJSON.getString("Msg"))) {
-				logger.error("鍒涘缓鐩存挱闂磋繑鍥炵爜:" + resultJSON.getString("code") + "\br" + "閿欒淇℃伅:" + resultJSON.getString("Msg"));
+				logger.error("创建直播间返回码:" + resultJSON.getString("code") + "\br" + "错误信息:" + resultJSON.getString("Msg"));
 			}
 			result.failedWithReturn(resultJSON.getString("Msg"));
 		}
