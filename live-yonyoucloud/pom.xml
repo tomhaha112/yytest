@@ -225,4 +225,44 @@
 			</plugin>
 		</plugins>
 	</build>
+	
+	<profiles>
+		<profile>
+			<id>dev</id>
+			<activation>
+				<activeByDefault>true</activeByDefault>
+			</activation>
+			<properties>
+				<env>dev</env>
+			</properties>
+			<build>
+				<filters>
+					<filter>src/main/package/config-${env}.properties</filter>
+				</filters>
+			</build>
+		</profile>
+		<profile>
+			<id>test</id>
+			<properties>
+				<env>test</env>
+			</properties>
+			<build>
+				<filters>
+					<filter>src/main/package/config-${env}.properties</filter>
+				</filters>
+			</build>
+		</profile>
+
+		<profile>
+			<id>real</id>
+			<properties>
+				<env>real</env>
+			</properties>
+			<build>
+				<filters>
+					<filter>src/main/package/config-${env}.properties</filter>
+				</filters>
+			</build>
+		</profile>
+	</profiles>
 </project>
