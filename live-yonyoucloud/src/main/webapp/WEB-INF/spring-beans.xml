@@ -31,7 +31,7 @@
 	</bean>
 	
 	<bean id="defaultConfig" class="com.yonyou.iuap.payment.sdk.common.DefaultConfig">
-		<property name="apiDomain" value="http://localhost:8080"/>
+		<property name="apiDomain" value="${pom.live.server.url}"/>
 		<property name="clientRemoteAuthStrategy" ref="payClientRemoteAuthStrategy"/>
 		<property name="apiBasePackage" value="com.yonyou.live.sdk.service"/>
 		<property name="globalHttpConfig">
