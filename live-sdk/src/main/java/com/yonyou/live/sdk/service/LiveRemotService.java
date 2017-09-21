@@ -12,7 +12,7 @@ public interface LiveRemotService {
 
 	@OpenAPI(httpMethod = OpenAPI.HttpMethod.POST, uriPath = "/livecloud-server/service/l/getlives", resultJsonKey = RESULT_JSON_KEY,resultErrCodeKey="",resultErrMsgKey="")
 	String getLives(
-			@ParamAttr(location = ParamAttr.Location.URL, paramKey = "userId") final String userId) throws ServiceException;
+			@ParamAttr(location = ParamAttr.Location.URL, paramKey = "zbid") final String zbid) throws ServiceException;
 	
 	@OpenAPI(httpMethod = OpenAPI.HttpMethod.POST, uriPath = "/livecloud-server/service/l/getlive", resultJsonKey = "",resultErrCodeKey="",resultErrMsgKey="")
 	String getLive(
