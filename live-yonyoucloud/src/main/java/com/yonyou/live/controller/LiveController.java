@@ -24,7 +24,7 @@ public class LiveController {
 	 * @return
 	 */
 	@RequestMapping(value = "/getlives", method = RequestMethod.GET)
-	public JsonResponse getAllLives(@RequestParam(value="userId")String userId,
+	public JsonResponse getAllLives(@RequestParam(value="tenantId")String tenantId,
 			@RequestParam(value="pageNum",required = false) Integer pageNum,
 			@RequestParam(value="pageSize",required = false) Integer pageSize) {
 		JsonResponse result = new JsonResponse();
@@ -32,7 +32,7 @@ public class LiveController {
 		try {
 			if(pageNum == null) pageNum = 1;
 			if(pageSize == null) pageSize = 10;
-			data = liveService.getLives(userId, pageNum, pageSize);
+			data = liveService.getLives(tenantId, pageNum, pageSize);
 		} catch (ServiceException e) {
 			e.printStackTrace();
 			result.failed("访问直播失败");

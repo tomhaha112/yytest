@@ -29,6 +29,17 @@
 		</where>
 	</select>
 	
+	<select id="getLiveRoomByAppAndTenant" parameterType="Map"
+		resultMap="BaseResultMap">
+	    select
+		<include refid="Base_Column_List" />
+		from live_tenant_room
+		<where>
+		 appcloudId = #{appcloudId,jdbcType=VARCHAR}
+		 and tenantId = #{tenantId,jdbcType=VARCHAR}
+		</where>
+	</select>
+	
 	<insert id="insertLiveRoomEntity" parameterType="com.yonyou.live.broadcast.sdk.model.LiveTenantEntity">
 	  insert into live_tenant_room
 	  (appcloudId,tenantId,adminId,liveRoomId,createTime)

@@ -17,6 +17,7 @@ import com.alibaba.fastjson.JSONObject;
 import com.yonyou.iuap.payment.common.http.HttpRequestContextHolder;
 import com.yonyou.iuap.payment.sdk.common.ServiceException;
 import com.yonyou.iuap.utils.PropertyUtil;
+import com.yonyou.live.broadcast.result.ServiceResult;
 import com.yonyou.live.broadcast.sdk.model.LiveTenantEntity;
 import com.yonyou.live.broadcast.sdk.remote.service.LiveService;
 import com.yonyou.live.broadcast.sdk.service.LiveRoomService;
@@ -44,11 +45,17 @@ public class LiveController {
 	 * @return
 	 */
 	@RequestMapping(value = "/getlives", method = RequestMethod.POST)
-	public JsonResponse getAllLives(String zbid, int pageNum, int pageSize) {
+	public JsonResponse getAllLives(String tenantId, int pageNum, int pageSize) {
 		JsonResponse result = new JsonResponse();
-		if (StringUtils.isEmpty(zbid)) {
+		if (StringUtils.isEmpty(tenantId)) {
 			return result.failedWithReturn("参数为空");
 		}
+		String appCloudId = httpRequestContextHolder.getHttpRequestContext().getCloudId();
+		ServiceResult<LiveTenantEntity> roomResult = liveRoomService.getLiveRoomByAppAndTenant(tenantId, appCloudId);
+		if(!roomResult.isSuccess()){
+			return result.failedWithReturn("未创建直播间");
+		}
+		String zbid = roomResult.getResult().getLiveRoomId();
 		String vZanServer = PropertyUtil.getPropertyByKey("vzan.server.url");
 		String livesUrl = vZanServer + "/VZLive/GetLiveList";
 		String httpResult = "";

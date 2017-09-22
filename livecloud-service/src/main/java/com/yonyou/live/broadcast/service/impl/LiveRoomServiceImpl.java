@@ -38,4 +38,16 @@ public class LiveRoomServiceImpl implements LiveRoomService{
 		return ServiceResult.failure(ServiceResultCode.LIVE_ADMIN_INSERT_ERROR.getErrCode(), ServiceResultCode.LIVE_ADMIN_INSERT_ERROR.getErrMsg());
 	}
 
+	@Override
+	public ServiceResult<LiveTenantEntity> getLiveRoomByAppAndTenant(String tenantId, String appCloudId) {
+		Map<String,String> paramsMap = new HashMap<String,String>();
+		paramsMap.put("appcloudId", appCloudId);
+		paramsMap.put("tenantId", tenantId);
+		LiveTenantEntity tenantEntity =  roomDao.getLiveRoomByAppAndTenant(paramsMap);
+		if(tenantEntity == null){
+			return ServiceResult.failure(ServiceResultCode.LIVE_ADMIN_QUERY_ERROR.getErrCode(), ServiceResultCode.LIVE_ADMIN_QUERY_ERROR.getErrMsg());
+		}
+		return ServiceResult.success(tenantEntity);
+	}
+
 }
