@@ -28,8 +28,8 @@ public class TestController {
 		JsonResponse result = new JsonResponse();
 		String data = "";
 		try {
-			data = liveService.getLives(userId);
-		} catch (ServiceException e) {
+//			data = liveService.getLives(userId);
+		} catch (Exception e) {
 			e.printStackTrace();
 			result.failed("访问直播失败");
 		}
