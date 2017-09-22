@@ -12,4 +12,6 @@ public interface LiveRoomDao {
 	LiveTenantEntity getLiveRoomByTenant(Map<String,String> paramMap);
 	
 	int insertLiveRoomEntity(LiveTenantEntity liveEntity);
+	
+	LiveTenantEntity getLiveRoomByAppAndTenant(Map<String,String> paramMap);
 }
