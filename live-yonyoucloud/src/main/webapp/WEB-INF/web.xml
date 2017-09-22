@@ -26,10 +26,7 @@
 		<servlet-name>spring</servlet-name>
 		<url-pattern>/</url-pattern>
 	</servlet-mapping>
-	<welcome-file-list>
-		<welcome-file>/index</welcome-file>
-	</welcome-file-list>
-	
+
 	<filter>
 		<filter-name>CAS Single Sign Out Filter</filter-name>
 		<filter-class>com.yonyou.yht.web.cas.sso.SingleSignOutFilter</filter-class>
@@ -75,5 +72,12 @@
 		<filter-name>CAS Assertion Thread Local Filter</filter-name>
 		<url-pattern>/*</url-pattern>
 	</filter-mapping>
+
+	<servlet-mapping>
+		<servlet-name>default</servlet-name>
+		<url-pattern>*.css</url-pattern>
+		<url-pattern>*.js</url-pattern>
+		<url-pattern>*.html</url-pattern>
+	</servlet-mapping>
 
 </web-app>
