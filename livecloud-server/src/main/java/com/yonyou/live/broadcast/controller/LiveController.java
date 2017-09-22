@@ -44,7 +44,7 @@ public class LiveController {
 	 * @return
 	 */
 	@RequestMapping(value = "/getlives", method = RequestMethod.POST)
-	public JsonResponse getAllLives(String zbid) {
+	public JsonResponse getAllLives(String zbid, int pageNum, int pageSize) {
 		JsonResponse result = new JsonResponse();
 		if (StringUtils.isEmpty(zbid)) {
 			return result.failedWithReturn("参数为空");
@@ -55,7 +55,7 @@ public class LiveController {
 		long currentTime = System.currentTimeMillis() / 1000;
 		String sign = MD5Utils.getSign(currentTime);
 		try {
-			httpResult = liveService.getLives(livesUrl, sign, zbid,1, 10, currentTime);
+			httpResult = liveService.getLives(livesUrl, sign, zbid, pageNum, pageSize, currentTime);
 		} catch (ServiceException e) {
 			logger.error(e.getMessage());
 			return result.failedWithReturn("请求失败");

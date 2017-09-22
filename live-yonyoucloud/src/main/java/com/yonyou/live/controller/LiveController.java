@@ -4,6 +4,7 @@ import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.alibaba.fastjson.JSONObject;
@@ -23,11 +24,15 @@ public class LiveController {
 	 * @return
 	 */
 	@RequestMapping(value = "/getlives", method = RequestMethod.GET)
-	public JsonResponse getAllLives(String userId) {
+	public JsonResponse getAllLives(@RequestParam(value="userId")String userId,
+			@RequestParam(value="pageNum",required = false) Integer pageNum,
+			@RequestParam(value="pageSize",required = false) Integer pageSize) {
 		JsonResponse result = new JsonResponse();
 		String data = "";
 		try {
-			data = liveService.getLives(userId);
+			if(pageNum == null) pageNum = 1;
+			if(pageSize == null) pageSize = 10;
+			data = liveService.getLives(userId, pageNum, pageSize);
 		} catch (ServiceException e) {
 			e.printStackTrace();
 			result.failed("访问直播失败");
