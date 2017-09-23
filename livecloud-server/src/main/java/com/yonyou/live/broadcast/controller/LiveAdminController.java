@@ -68,7 +68,7 @@ public class LiveAdminController {
 		long currentTime = System.currentTimeMillis()/1000;
 		String sign = MD5Utils.getSign(currentTime);
 		String url = "http://tliveapi.vzan.com/VZLive/UrlRedirect?zbid="+liveResult.getResult().getLiveRoomId();
-		response.sendRedirect(url+"&sign="+sign+"&timestamp="+currentTime+"&key=yonyouyun");
+		response.sendRedirect(url+"&sign="+sign+"&timestamp="+currentTime+"&userId="+userId);//+"&key=yonyouyun"  key不需要
 		return result;
 	}
 	
@@ -131,25 +131,39 @@ public class LiveAdminController {
 		JSONObject resultJSON = (JSONObject) JSONObject.parse(httpResult);
 		if (resultJSON.getBoolean("isok") != null && resultJSON.getBoolean("isok")) {
 			
-			//根据邀请人的信息 填充被邀请人的信息
+			//查看是否有邀请记录
 			LiveTenantEntity paramEntity = new LiveTenantEntity();
-			paramEntity.setAdminId(inviteUserId);
+			paramEntity.setAdminId(userId);
 			paramEntity.setLiveRoomId(zbid);
-			paramEntity.setStatus("1");
-			ServiceResult<LiveTenantEntity> inviteEntityResult = liveRoomService.getLiveRoomByEntity(paramEntity);
-			if(!inviteEntityResult.isSuccess()){
-				return result.failedWithReturn(inviteEntityResult.getMessage());
+			ServiceResult<LiveTenantEntity> existResult = liveRoomService.getLiveRoomByEntity(paramEntity);
+			if(existResult.isSuccess()){
+				//已存在 修改状态
+				LiveTenantEntity existEntity = existResult.getResult();
+				existEntity.setStatus("1");
+				liveRoomService.UpdateEntity(existEntity);
+			}else{
+				//不存在 新增
+				
+				//根据邀请人的信息 填充被邀请人的信息
+				paramEntity = new LiveTenantEntity();
+				paramEntity.setAdminId(inviteUserId);
+				paramEntity.setLiveRoomId(zbid);
+				paramEntity.setStatus("1");
+				ServiceResult<LiveTenantEntity> inviteEntityResult = liveRoomService.getLiveRoomByEntity(paramEntity);
+				if(!inviteEntityResult.isSuccess()){
+					return result.failedWithReturn(inviteEntityResult.getMessage());
+				}
+				LiveTenantEntity inviteEntity = inviteEntityResult.getResult();
+				
+				LiveTenantEntity tenantEntity = new LiveTenantEntity();
+				tenantEntity.setAdminId(userId);
+				tenantEntity.setTenantId(inviteEntity.getTenantId());
+				tenantEntity.setAppcloudId(inviteEntity.getAppcloudId());
+				tenantEntity.setCreateTime(new Date());
+				tenantEntity.setInviteUserId(inviteUserId);
+				tenantEntity.setLiveRoomId(zbid);
+				liveRoomService.insertLiveRoom(tenantEntity);
 			}
-			LiveTenantEntity inviteEntity = inviteEntityResult.getResult();
-			
-			LiveTenantEntity tenantEntity = new LiveTenantEntity();
-			tenantEntity.setAdminId(userId);
-			tenantEntity.setTenantId(inviteEntity.getTenantId());
-			tenantEntity.setAppcloudId(inviteEntity.getAppcloudId());
-			tenantEntity.setCreateTime(new Date());
-			tenantEntity.setInviteUserId(inviteUserId);
-			tenantEntity.setLiveRoomId(zbid);
-			liveRoomService.insertLiveRoom(tenantEntity);
 			
 			result.successWithData("data", resultJSON.get("Msg"));
 		}else{
@@ -161,15 +175,15 @@ public class LiveAdminController {
 		return result;
 	}
 	
-	@RequestMapping(value = "/delSumAdmin", method = RequestMethod.GET)
+	@RequestMapping(value = "/delSumAdmin", method = {RequestMethod.GET, RequestMethod.POST})
 	public JsonResponse delSumAdmin(HttpServletRequest request,HttpServletResponse response) throws IOException {
 		JsonResponse result = new JsonResponse();
 		String userId = request.getParameter("userId");
 		String zbid = request.getParameter("zbid");
+		logger.info("删除子管理员回调 ： userId ->" + userId + ",zbid-> " + zbid);
 		if(StringUtils.isEmpty(userId) || StringUtils.isEmpty(zbid)){
 			return result.failedWithReturn("参数有误");
 		}
-		logger.info("删除子管理员回调 ： userId ->" + userId + ",zbid-> " + zbid);
 		ServiceResult<Integer> liveResult = liveRoomService.deleteByUserAndRoom(userId, zbid);
 		if(liveResult.isSuccess()){
 			int count = liveResult.getResult();

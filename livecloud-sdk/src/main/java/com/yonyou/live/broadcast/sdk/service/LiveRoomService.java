@@ -14,4 +14,6 @@ public interface LiveRoomService {
 	ServiceResult <LiveTenantEntity> getLiveRoomByEntity(LiveTenantEntity paramEntity);
 	
 	ServiceResult <Integer> deleteByUserAndRoom(String userId, String liveRoomId);
+	
+	ServiceResult <LiveTenantEntity> UpdateEntity(LiveTenantEntity entity);
 }

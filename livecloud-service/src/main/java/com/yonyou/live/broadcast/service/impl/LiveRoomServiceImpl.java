@@ -73,4 +73,15 @@ public class LiveRoomServiceImpl implements LiveRoomService{
 		return ServiceResult.success(count);
 	}
 
+	@Override
+	public ServiceResult<LiveTenantEntity> UpdateEntity(LiveTenantEntity LiveTenantEntity) {
+		try{
+			roomDao.updateLiveRoom(LiveTenantEntity);
+		}catch(Exception e){
+			e.printStackTrace();
+			return ServiceResult.failure(ServiceResultCode.LIVE_ADMIN_UPDATE_ERROR);
+		}
+		return null;
+	}
+
 }

@@ -85,8 +85,35 @@
 	  )
 	</insert>
 	
-	<delete id="deleteByUserAndRoom">
+	<update id="deleteByUserAndRoom">
 		update live_tenant_room t set t.status = '0' where t.adminId = #{userId}
 		and t.liveRoomId = #{liveRoomId} and t.inviteUserId is not null
-	</delete>
+	</update>
+	
+	<update id="updateLiveRoom">
+		update live_tenant_room t 
+		<set>
+			<if test="appcloudId != null">
+				t.appcloudId = #{appcloudId,jdbcType=VARCHAR},
+			</if>
+			<if test="tenantId != null">
+				t.tenantId = #{tenantId,jdbcType=VARCHAR},
+			</if>
+			<if test="adminId != null">
+				t.adminId = #{adminId,jdbcType=VARCHAR},
+			</if>
+			<if test="inviteUserId != null">
+				t.inviteUserId = #{inviteUserId,jdbcType=VARCHAR},
+			</if>
+			<if test="liveRoomId != null">
+				t.liveRoomId = #{liveRoomId,jdbcType=VARCHAR},
+			</if>
+			<if test="status != null">
+				t.status = #{status,jdbcType=VARCHAR},
+			</if>
+		</set>
+		<where>
+			t.id = #{id,jdbcType=VARCHAR}
+		</where>
+	</update>
 </mapper>

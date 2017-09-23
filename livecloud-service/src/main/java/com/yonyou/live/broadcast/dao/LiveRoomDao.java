@@ -19,4 +19,6 @@ public interface LiveRoomDao {
 	LiveTenantEntity getLiveRoomByEntity(LiveTenantEntity paramEntity);
 
 	int deleteByUserAndRoom(@Param("userId")String userId, @Param("liveRoomId")String liveRoomId);
+
+	void updateLiveRoom(LiveTenantEntity liveTenantEntity);
 }
