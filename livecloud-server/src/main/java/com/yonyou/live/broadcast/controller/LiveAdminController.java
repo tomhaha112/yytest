@@ -169,6 +169,7 @@ public class LiveAdminController {
 		if(StringUtils.isEmpty(userId) || StringUtils.isEmpty(zbid)){
 			return result.failedWithReturn("参数有误");
 		}
+		logger.info("删除子管理员回调 ： userId ->" + userId + ",zbid-> " + zbid);
 		ServiceResult<Integer> liveResult = liveRoomService.deleteByUserAndRoom(userId, zbid);
 		if(liveResult.isSuccess()){
 			int count = liveResult.getResult();
