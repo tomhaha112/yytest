@@ -17,7 +17,8 @@ public enum ServiceResultCode {
 	
 	LIVE_AUTH_QUERY_ERROR("1001","查询认证信息失败"),
 	LIVE_ADMIN_QUERY_ERROR("1002","查询管理员信息失败"),
-	LIVE_ADMIN_INSERT_ERROR("1003","插入直播间失败");
+	LIVE_ADMIN_INSERT_ERROR("1003","插入直播间失败"),
+	LIVE_ADMIN_DEL_ERROR("1004","删除子管理员失败");
 
    
     private String errCode;

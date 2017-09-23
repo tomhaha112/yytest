@@ -22,7 +22,7 @@ import com.yonyou.live.broadcast.sdk.model.LiveTenantEntity;
 import com.yonyou.live.broadcast.sdk.remote.service.LiveService;
 import com.yonyou.live.broadcast.sdk.service.LiveRoomService;
 import com.yonyou.live.broadcast.util.MD5Utils;
-import com.yonyou.yht.utils.JsonResponse;
+import com.yonyou.yht.sdkutils.JsonResponse;
 
 
 @RestController
@@ -114,7 +114,7 @@ public class LiveController {
 	}
 	
 	/**
-	 * 鍒涘缓鐩存挱闂�
+	 * 创建直播间
 	 * @param json
 	 * @return
 	 */
@@ -170,5 +170,5 @@ public class LiveController {
 		}
 		return result;
 	}
-
+	
 }

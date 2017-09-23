@@ -50,4 +50,27 @@ public class LiveRoomServiceImpl implements LiveRoomService{
 		return ServiceResult.success(tenantEntity);
 	}
 
+	@Override
+	public ServiceResult<LiveTenantEntity> getLiveRoomByEntity(
+			LiveTenantEntity paramEntity) {
+		LiveTenantEntity tenantEntity =  roomDao.getLiveRoomByEntity(paramEntity);
+		if(tenantEntity == null){
+			return ServiceResult.failure(ServiceResultCode.LIVE_ADMIN_QUERY_ERROR.getErrCode(), ServiceResultCode.LIVE_ADMIN_QUERY_ERROR.getErrMsg());
+		}
+		return ServiceResult.success(tenantEntity);
+	}
+
+	@Override
+	public ServiceResult<Integer> deleteByUserAndRoom(String userId,
+			String liveRoomId) {
+		int count = 0;
+		try{
+			count =  roomDao.deleteByUserAndRoom(userId, liveRoomId);
+		}catch(Exception e){
+			e.printStackTrace();
+			return ServiceResult.failure(ServiceResultCode.LIVE_ADMIN_DEL_ERROR);
+		}
+		return ServiceResult.success(count);
+	}
+
 }

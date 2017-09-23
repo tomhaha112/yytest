@@ -9,12 +9,14 @@
 		<result column="adminId" jdbcType="VARCHAR" property="adminId" />
 		<result column="liveRoomId" jdbcType="VARCHAR" property="liveRoomId" />
 		<result column="createTime" jdbcType="TIMESTAMP" property="createTime" />
+		<result column="inviteUserId" jdbcType="VARCHAR" property="inviteUserId" />
+		<result column="status" jdbcType="VARCHAR" property="status" />
 	</resultMap>
 	
 	
 	<sql id="Base_Column_List">
 		id, appcloudId, tenantId, adminId, 
-		liveRoomId, createTime
+		liveRoomId, createTime, inviteUserId, status
 	</sql>
 	
 	<select id="getLiveRoomByTenant" parameterType="Map"
@@ -26,6 +28,34 @@
 		 appcloudId = #{appcloudId,jdbcType=VARCHAR}
 		 and tenantId = #{tenantId,jdbcType=VARCHAR}
 		 and adminId = #{adminId,jdbcType=VARCHAR}
+		 and status = '1'
+		</where>
+	</select>
+	
+	<select id="getLiveRoomByEntity" parameterType="com.yonyou.live.broadcast.sdk.model.LiveTenantEntity"
+		resultMap="BaseResultMap">
+	    select
+		<include refid="Base_Column_List" />
+		from live_tenant_room t
+		<where>
+			<if test="appcloudId != null">
+				and t.appcloudId = #{appcloudId,jdbcType=VARCHAR}
+			</if>
+			<if test="tenantId != null">
+				and t.tenantId = #{tenantId,jdbcType=VARCHAR}
+			</if>
+			<if test="adminId != null">
+				and t.adminId = #{adminId,jdbcType=VARCHAR}
+			</if>
+			<if test="inviteUserId != null">
+				and t.inviteUserId = #{inviteUserId,jdbcType=VARCHAR}
+			</if>
+			<if test="liveRoomId != null">
+				and t.liveRoomId = #{liveRoomId,jdbcType=VARCHAR}
+			</if>
+			<if test="status != null">
+				and t.status = #{status,jdbcType=VARCHAR}
+			</if>
 		</where>
 	</select>
 	
@@ -38,18 +68,25 @@
 		 appcloudId = #{appcloudId,jdbcType=VARCHAR}
 		 and tenantId = #{tenantId,jdbcType=VARCHAR}
 		</where>
+		limit 1
 	</select>
 	
 	<insert id="insertLiveRoomEntity" parameterType="com.yonyou.live.broadcast.sdk.model.LiveTenantEntity">
 	  insert into live_tenant_room
-	  (appcloudId,tenantId,adminId,liveRoomId,createTime)
+	  (appcloudId,tenantId,adminId,liveRoomId,createTime,inviteUserId)
 	  values
 	  (
 	  #{appcloudId,jdbcType=VARCHAR},
 	   #{tenantId,jdbcType=VARCHAR},
 	   #{adminId,jdbcType=VARCHAR},
 	   #{liveRoomId,jdbcType=VARCHAR},
-	   #{createTime,jdbcType=DATE}
+	   #{createTime,jdbcType=DATE},
+	   #{inviteUserId,jdbcType=VARCHAR}
 	  )
 	</insert>
+	
+	<delete id="deleteByUserAndRoom">
+		update live_tenant_room t set t.status = '0' where t.adminId = #{userId}
+		and t.liveRoomId = #{liveRoomId} and t.inviteUserId is not null
+	</delete>
 </mapper>

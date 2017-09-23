@@ -29,4 +29,15 @@
         </property>
     </bean>
     
+    <bean id="businessRedisPool" class="com.yonyou.iuap.cache.redis.RedisPoolFactory"
+          scope="prototype" factory-method="createJedisPool">
+        <constructor-arg>
+            <value><![CDATA[${pom.redis.url}]]></value>
+        </constructor-arg>
+    </bean>
+    
+	<bean id="jedisTemplate" class="org.springside.modules.nosql.redis.JedisTemplate">
+        <constructor-arg ref="businessRedisPool"></constructor-arg>
+    </bean>
+    
 </beans>

@@ -10,7 +10,8 @@ import org.springframework.web.bind.annotation.RestController;
 import com.alibaba.fastjson.JSONObject;
 import com.yonyou.iuap.payment.sdk.common.ServiceException;
 import com.yonyou.live.sdk.service.LiveRemotService;
-import com.yonyou.yht.utils.JsonResponse;
+import com.yonyou.yht.sdk.UserCenter;
+import com.yonyou.yht.sdkutils.JsonResponse;
 
 @RestController
 @RequestMapping(value = "/live")
@@ -65,7 +66,7 @@ public class LiveController {
 	 * @return
 	 */
 	@RequestMapping(value = "/create", method = RequestMethod.GET)
-	public JsonResponse createLiveRoom(String userId,String tenantId,String sitename) {
+	public JsonResponse createLiveRoom(String userId,String tenantId,String sitename, String sitelogo) {
 		JsonResponse result = new JsonResponse();
 		String data = "";
 		try {
@@ -77,9 +78,18 @@ public class LiveController {
 			if(StringUtils.isEmpty(userJSON.getString("userId"))){
 				return result.failedWithReturn("用户查询异常");
 			}
+			
+			String headimgInfo = UserCenter.getUserAvatar(userId);
+			if(StringUtils.isEmpty(headimgInfo)){
+			    return result.failedWithReturn("友互通连接异常");
+			}
+			JSONObject headimgJson = JSONObject.parseObject(headimgInfo);
+			String headimg = "";
+			if(StringUtils.equals(headimgJson.getString("status"),"1")){
+				headimg = headimgJson.getString("avatar");
+			}
+			
 			String nickname = userJSON.getString("userName");
-			String headimg = "https://iuap-market-test.oss-cn-beijing.aliyuncs.com/userphoto-efefefefefef.jpg";
-			String sitelogo = "https://iuap-market-test.oss-cn-beijing.aliyuncs.com/userphoto-a7ecc96a-7ab0-4a01-a966-24baae219fb6.jpg";
 			data = liveService.createLiveRoom(userId, nickname, headimg, sitelogo, sitename, tenantId);
 		} catch (ServiceException e) {
 			e.printStackTrace();

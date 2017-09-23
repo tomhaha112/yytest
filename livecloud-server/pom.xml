@@ -97,7 +97,7 @@
 		<dependency>
 			<groupId>com.yonyou.yht</groupId>
 			<artifactId>yht-sdk</artifactId>
-			<version>0.2-SNAPSHOT</version>
+			<version>0.3-SNAPSHOT</version>
 		</dependency>
 
 		<dependency>
@@ -105,6 +105,12 @@
 			<artifactId>iuap-tenant-sdk</artifactId>
 			<version>1.2.0-SNAPSHOT</version>
 		</dependency>
+
+		<dependency>
+            <groupId>com.yonyou.iuap</groupId>
+            <artifactId>iuap-cache</artifactId>
+            <version>2.0.1-RELEASE</version>
+        </dependency>
 
 		<dependency>
 			<groupId>org.jboss.logging</groupId>

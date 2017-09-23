@@ -48,5 +48,15 @@ public interface LiveService {
 			@ParamAttr(location = ParamAttr.Location.URL, paramKey = "userId") final String userId)
 			throws ServiceException;
 	
-	
+	@OpenAPI(httpMethod = OpenAPI.HttpMethod.POST, uriPath = "${runtime_uripath}", resultErrCodeKey="",resultErrMsgKey="")
+	String createSubAdmin(
+			@ParamAttr(location = ParamAttr.Location.RUNTIME_URIPATH, paramKey = "callbackuri") final String callbackuri,
+			@ParamAttr(location = ParamAttr.Location.URL, paramKey = "sign") final String sign,
+			@ParamAttr(location = ParamAttr.Location.URL, paramKey = "timestamp") final Long timestamp,
+			@ParamAttr(location = ParamAttr.Location.URL, paramKey = "zbid") final String zbid,
+			@ParamAttr(location = ParamAttr.Location.URL, paramKey = "InviteUserId") final String InviteUserId,
+			@ParamAttr(location = ParamAttr.Location.URL, paramKey = "userId") final String userId,
+			@ParamAttr(location = ParamAttr.Location.URL, paramKey = "headimg") final String headimg,
+			@ParamAttr(location = ParamAttr.Location.URL, paramKey = "nickname") final String nickname)
+			throws ServiceException;
 }
