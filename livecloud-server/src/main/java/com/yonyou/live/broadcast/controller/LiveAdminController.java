@@ -83,7 +83,7 @@ public class LiveAdminController {
 		if(arr.length != 2){
 			return result.failedWithReturn("参数异常");
 		}else{
-			zbid = arr[0];
+			zbid = arr[0].substring(9);
 			inviteUserId = arr[1];
 		}
 		
@@ -140,7 +140,10 @@ public class LiveAdminController {
 				//已存在 修改状态
 				LiveTenantEntity existEntity = existResult.getResult();
 				existEntity.setStatus("1");
-				liveRoomService.UpdateEntity(existEntity);
+				ServiceResult<LiveTenantEntity> updateResult = liveRoomService.UpdateEntity(existEntity);
+				if(!updateResult.isSuccess()){
+					return result.failedWithReturn(updateResult.getMessage());
+				}
 			}else{
 				//不存在 新增
 				
