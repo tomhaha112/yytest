@@ -26,10 +26,25 @@
                 </div>        
             </header>
             
+<!--            {
+        \"totalcount\":1,
+        \"banner\":\"http://j.vzan.cc//images/vzanbg/small_ind_2.png?ver=636397966118333335\",
+        \"Id\":455686,
+        \"starttime\":\"2017-09-21 16:07:34\",
+        \"sort\":1,
+        \"title\":\"sssss\",
+        \"viewcts\":27,
+        \"status\":-1
+    }-->
+            
+            
             <nav>
                 <ul id="list" class="row" style="list-style: none">
-                    <li v-for="(item,index) in items" class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
-                        <a v-bind:href="item.linkaddress">{{ parentMessage }}--{{ index }}-{{ item.a }}-{{ item.b }}--{{item.linkname}}</a>
+                    <li v-for="(item,index) in orderedItems" class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
+                        
+                        {{item.title}}--{{item.viewcts}}--{{item.starttime}}
+                    
+                        
                     </li>
                 </ul>
             </nav>
