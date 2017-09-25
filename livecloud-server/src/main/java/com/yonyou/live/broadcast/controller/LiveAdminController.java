@@ -74,7 +74,7 @@ public class LiveAdminController {
 	}
 	
 	@RequestMapping(value = "/createSubAdmin", method = {RequestMethod.POST,RequestMethod.GET})
-//	@ResponseBody
+	@ResponseBody
 	public String createSubAdmin(@RequestParam(value="sweepcode") String sweepcode,
 			@RequestParam(value="sweepkey") String sweepKey, HttpServletRequest request,
 			HttpServletResponse response) {
