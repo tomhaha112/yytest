@@ -14,6 +14,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.ResponseBody;
 import org.springside.modules.nosql.redis.JedisTemplate;
 
 import com.alibaba.fastjson.JSONObject;
@@ -52,6 +53,7 @@ public class LiveAdminController {
 	 * @throws IOException 
 	 */
 	@RequestMapping(value = "/getliveAdmin", method = RequestMethod.GET)
+	@ResponseBody
 	public JsonResponse createLiveAdmin(HttpServletRequest request,HttpServletResponse response) throws IOException {
 		JsonResponse result = new JsonResponse();
 		String userId = request.getParameter("userId");
@@ -168,6 +170,7 @@ public class LiveAdminController {
 			request.setAttribute("result", resultJSON.getString("Msg"));
 		} catch(Exception e){
 			result.failedWithReturn(e.getLocalizedMessage());
+			request.setAttribute("result", e.getLocalizedMessage());
 			logger.error("创建子管理员失败", e);
 		}
 		return "index";
@@ -199,6 +202,7 @@ public class LiveAdminController {
 	}
 
 	@RequestMapping(value = "/delSumAdmin", method = {RequestMethod.GET, RequestMethod.POST})
+	@ResponseBody
 	public JsonResponse delSumAdmin(HttpServletRequest request,HttpServletResponse response) throws IOException {
 		JsonResponse result = new JsonResponse();
 		String userId = request.getParameter("userId");
@@ -220,6 +224,7 @@ public class LiveAdminController {
 	}
 	
 	@RequestMapping(value = "/getUserInfo", method = {RequestMethod.GET, RequestMethod.POST})
+	@ResponseBody
 	public JsonResponse getUserInfo(HttpServletRequest request,HttpServletResponse response) throws IOException {
 		JsonResponse result = new JsonResponse();
 		try{
