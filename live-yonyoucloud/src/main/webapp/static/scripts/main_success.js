@@ -75,7 +75,7 @@ var app = new Vue({
         },
         before_click: "inherit",
         after_click:"none",
-        live_topic_data://纪录直播话题纪录
+        live_topic_data:''//纪录直播话题纪录
         
     },
     methods:{
