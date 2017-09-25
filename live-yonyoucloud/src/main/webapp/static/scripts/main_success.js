@@ -31,7 +31,7 @@ $.ajax({
     dataType: "json", //数据类型是json型
     success: function (live_list) {   //成功时返回的data值，注意这个data是后台返回的值，上面的data是你要传给后台的值  
                 live_list_data = JSON.parse(live_list["data"]);//json对象数组
-                live_list_status = live_list[status];//成功与否
+                live_list_status = live_list["status"];//成功与否
             },  
     error: function () {   
                   
@@ -80,7 +80,7 @@ var app = new Vue({
         },
         before_click: "inherit",
         after_click:"none",
-        live_topic_data:'',//纪录直播话题纪录
+        live_topic_data:''//纪录直播话题纪录
         
     },
     methods:{

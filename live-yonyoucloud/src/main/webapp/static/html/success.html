@@ -1,6 +1,7 @@
 <!DOCTYPE HTML>
 <html>
     <head>
+    	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <link href="../styles/bootstrap.min.css" rel="stylesheet" type="text/css">
         <link href="../styles/animate.css" rel="stylesheet" type="text/css">
         <script src="../scripts/jquery-3.2.1.js"></script>
@@ -43,7 +44,7 @@
             </div>
             <div class="after_clicked_show" v-bind:style="{display : after_click}">
                 <p>gggggggggggg</p>
-                {{live_topic_data.starttime}}
+                <p>{{live_topic_data.starttime}}</p>
                 
                 
                 <button v-on:click="checkto_before">返回</button>
