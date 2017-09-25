@@ -1,20 +1,3 @@
-/*
-{
-    "status":1,
-    "data":"[
-    {
-        \"totalcount\":1,
-        \"banner\":\"http://j.vzan.cc//images/vzanbg/small_ind_2.png?ver=636397966118333335\",
-        \"Id\":455686,
-        \"starttime\":\"2017-09-21 16:07:34\",
-        \"sort\":1,
-        \"title\":\"sssss\",
-        \"viewcts\":27,
-        \"status\":-1
-    }
-    ]"
-}
-*/
 var live_list_data='';//直播列表信息
 var live_list_status='';
 //var live_topic_data_receive='';//直播话题信息
@@ -75,8 +58,7 @@ var app = new Vue({
         },
         before_click: "inherit",
         after_click:"none",
-        live_topic_data:''//纪录直播话题纪录
-        
+        live_topic_data:''//纪录直播话题纪录      
     },
     methods:{
         choosetab:function(){
@@ -84,24 +66,16 @@ var app = new Vue({
         },
         clicktest:function(){
             this.live_room_id = arguments[0];
-            //alert(arguments[0]);
             var url = "http://172.20.18.241/live-yonyoucloud/live/getlive?liveId="+this.live_room_id;//利用直播间id拼接接口
-            
-/*            alert(url);
-            var  live_topic_data_test = "{\"pushurl\":\"rtmp://pili-publish.vzan.com/vzanlive/131504476672337356?e=1508566067&token=ukF6gb319SJ-0vRruRI3Wo48W3-437u99TAw8bPn:AVev_uzkF3JGH7MmYWWx126hT8M=\",\"speaker\":\"\",\"rtmpurl\":\"\",\"banner\":\"http://j.vzan.cc//images/vzanbg/small_ind_2.png?ver=636397966118333335\",\"Id\":455686,\"starttime\":\"2017-09-21 16:07:34\",\"sort\":1,\"title\":\"sssss\",\"viewcts\":101,\"introduction\":\"\",\"status\":-1,\"hlsurl\":\"\"}";
-            this.live_topic_data = JSON.parse(live_topic_data_test);
-            alert(this.live_topic_data);//test*/
             $.ajax({  
                 url: url,
-                async:true,
                 type: "get",   //请求方式是get   
                 dataType: "json", //数据类型是json型
                 success: function (live_topic) {   //成功时返回的data值，注意这个data是后台返回的值，上面的data是你要传给后台的值  
                 			this.live_topic_data = JSON.parse(live_topic["data"])["data"];//直播话题数据json对象数组
                             //live_topic_status = live_topic[status];//成功与否
                             this.before_click = "none";
-                            this.after_click = "blcok";
-                            
+                            this.after_click = "blcok";  
                         },  
                 error: function () {   
                   
