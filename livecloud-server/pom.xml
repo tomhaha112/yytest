@@ -8,8 +8,8 @@
 		<artifactId>livecloud-parent</artifactId>
 		<version>0.0.1-SNAPSHOT</version>
 	</parent>
-	<artifactId>livecloud-server</artifactId>
-	<name>livecloud-server</name>
+	<artifactId>livecloud_server</artifactId>
+	<name>livecloud_server</name>
 	<packaging>war</packaging>
 
 	<properties>
@@ -275,7 +275,7 @@
 	</dependencies>
 
 	<build>
-		<finalName>livecloud-server</finalName>
+		<finalName>livecloud_server</finalName>
 		<resources>
 			<resource>
 				<directory>resources</directory>
@@ -288,7 +288,7 @@
 				<artifactId>maven-war-plugin</artifactId>
 				<version>2.6</version>
 				<configuration>
-					<warName>livecloud-server</warName>
+					<warName>livecloud_server</warName>
 					<webResources>
 						<resource>
 							<filtering>true</filtering>
