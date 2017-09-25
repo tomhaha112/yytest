@@ -10,11 +10,10 @@ import org.apache.commons.lang3.StringUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.ResponseBody;
-import org.springframework.web.bind.annotation.RestController;
 import org.springside.modules.nosql.redis.JedisTemplate;
 
 import com.alibaba.fastjson.JSONObject;
@@ -28,7 +27,7 @@ import com.yonyou.live.broadcast.util.MD5Utils;
 import com.yonyou.yht.sdk.UserCenter;
 import com.yonyou.yht.sdkutils.JsonResponse;
 
-@RestController
+@Controller
 @RequestMapping(value = "/admin/l")
 public class LiveAdminController {
 
@@ -73,16 +72,18 @@ public class LiveAdminController {
 	}
 	
 	@RequestMapping(value = "/createSubAdmin", method = {RequestMethod.POST,RequestMethod.GET})
-	@ResponseBody
-	public JsonResponse createSubAdmin(@RequestParam(value="sweepcode") String sweepcode,
-			@RequestParam(value="sweepkey") String sweepKey) {
+//	@ResponseBody
+	public String createSubAdmin(@RequestParam(value="sweepcode") String sweepcode,
+			@RequestParam(value="sweepkey") String sweepKey, HttpServletRequest request,
+			HttpServletResponse response) {
 		JsonResponse result = new JsonResponse();
 		try{
 			String zbid = "";
 			String inviteUserId = "";
 			String[] arr = sweepcode.split("@");
 			if(arr.length != 2){
-				return result.failedWithReturn("参数异常");
+//				return result.failedWithReturn("参数异常");
+				response.getWriter().write("参数异常");
 			}else{
 				zbid = arr[0].substring(9);
 				inviteUserId = arr[1];
@@ -91,7 +92,8 @@ public class LiveAdminController {
 			String qrcodeCacheKey =  new StringBuffer(REDIS_PREFIX).append(sweepKey).toString();
 			String cacheUser = jedisTemplate.get(qrcodeCacheKey);
 			if(StringUtils.isEmpty(cacheUser)){
-				return result.failedWithReturn("超时，请重新扫码");
+//				return result.failedWithReturn("超时，请重新扫码");
+				response.getWriter().write("超时，请重新扫码");
 			}
 			
 			String[] cacheUserArray = cacheUser.split("&");
@@ -110,7 +112,8 @@ public class LiveAdminController {
 				httpResult = liveService.createSubAdmin(liveUrl, sign, currentTime, zbid, inviteUserId, userId, headimg, nickname);
 			} catch (ServiceException e) {
 				logger.error(e.getMessage());
-				return result.failedWithReturn("请求失败");
+//				return result.failedWithReturn("请求失败");
+				response.getWriter().write("请求失败");
 			}
 			
 			JSONObject resultJSON = (JSONObject) JSONObject.parse(httpResult);
@@ -127,7 +130,8 @@ public class LiveAdminController {
 					existEntity.setStatus("1");
 					ServiceResult<LiveTenantEntity> updateResult = liveRoomService.UpdateEntity(existEntity);
 					if(!updateResult.isSuccess()){
-						return result.failedWithReturn(updateResult.getMessage());
+//						return result.failedWithReturn(updateResult.getMessage());
+						response.getWriter().write(updateResult.getMessage());
 					}
 				}else{
 					//不存在 新增
@@ -139,7 +143,8 @@ public class LiveAdminController {
 					paramEntity.setStatus("1");
 					ServiceResult<LiveTenantEntity> inviteEntityResult = liveRoomService.getLiveRoomByEntity(paramEntity);
 					if(!inviteEntityResult.isSuccess()){
-						return result.failedWithReturn(inviteEntityResult.getMessage());
+//						return result.failedWithReturn(inviteEntityResult.getMessage());
+						response.getWriter().write(inviteEntityResult.getMessage());
 					}
 					LiveTenantEntity inviteEntity = inviteEntityResult.getResult();
 					
@@ -160,11 +165,12 @@ public class LiveAdminController {
 				}
 				result.failedWithReturn(resultJSON.getString("Msg"));
 			}
+			request.setAttribute("result", resultJSON.getString("Msg"));
 		} catch(Exception e){
 			result.failedWithReturn(e.getLocalizedMessage());
 			logger.error("创建子管理员失败", e);
 		}
-		return result;
+		return "index";
 	}
 	
 	private String getNickName(String userId) {
