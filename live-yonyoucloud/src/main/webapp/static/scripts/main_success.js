@@ -91,8 +91,9 @@ var app = new Vue({
             
         },
         checkto_before:function(){
-            this.before_click= "inherit",
-            this.after_click="none"
+            this.before_click= "inherit";
+            this.after_click="none";
+            this.live_topic_data='';
         }
     }
 })
