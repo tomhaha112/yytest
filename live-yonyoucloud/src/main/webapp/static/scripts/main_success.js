@@ -30,7 +30,7 @@ $.ajax({
     type: "get",   //请求方式是get   
     dataType: "json", //数据类型是json型
     success: function (live_list) {   //成功时返回的data值，注意这个data是后台返回的值，上面的data是你要传给后台的值  
-                live_list_data = JSON.parse(live_list[data]);//json对象数组
+                live_list_data = JSON.parse(live_list["data"]);//json对象数组
                 live_list_status = live_list[status];//成功与否
             },  
     error: function () {   
@@ -102,7 +102,7 @@ var app = new Vue({
                 type: "get",   //请求方式是get   
                 dataType: "json", //数据类型是json型
                 success: function (live_topic) {   //成功时返回的data值，注意这个data是后台返回的值，上面的data是你要传给后台的值  
-                            this.live_topic_data = JSON.parse(live_topic[data])[data];//json对象数组
+                            this.live_topic_data = JSON.parse(live_topic["data"])["data"];//json对象数组
                             //live_topic_status = live_topic[status];//成功与否
                             this.before_click = "none";
                             this.after_click = "blcok";
