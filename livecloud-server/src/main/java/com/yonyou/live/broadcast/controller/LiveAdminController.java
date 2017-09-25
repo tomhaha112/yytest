@@ -75,7 +75,7 @@ public class LiveAdminController {
 	@RequestMapping(value = "/createSubAdmin", method = {RequestMethod.POST,RequestMethod.GET})
 	@ResponseBody
 	public JsonResponse createSubAdmin(@RequestParam(value="sweepcode") String sweepcode,
-			@RequestParam(value="sweepKey") String sweepKey) {
+			@RequestParam(value="sweepkey") String sweepKey) {
 		JsonResponse result = new JsonResponse();
 		try{
 			String zbid = "";
