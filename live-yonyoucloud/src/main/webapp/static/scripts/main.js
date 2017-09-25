@@ -72,7 +72,7 @@ var app1 = new Vue({
         orderedItems: function () {
             return this.items.sort(function(a,b){
                 return a.sort-b.sort;
-            });
+            });//orderby sort
   }
 }
 })
