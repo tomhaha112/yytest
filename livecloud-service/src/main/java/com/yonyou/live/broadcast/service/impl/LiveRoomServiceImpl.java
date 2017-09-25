@@ -81,7 +81,7 @@ public class LiveRoomServiceImpl implements LiveRoomService{
 			e.printStackTrace();
 			return ServiceResult.failure(ServiceResultCode.LIVE_ADMIN_UPDATE_ERROR);
 		}
-		return null;
+		return ServiceResult.success(LiveTenantEntity);
 	}
 
 }
