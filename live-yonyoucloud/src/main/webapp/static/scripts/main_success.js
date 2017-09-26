@@ -50,7 +50,7 @@
 /*var live_list = {"status":1,"data":"[{\"totalcount\":1,\"banner\":\"http://j.vzan.cc//images/vzanbg/small_ind_2.png?ver=636397966118333335\",\"Id\":455686,\"starttime\":\"2017-09-21 16:07:34\",\"sort\":1,\"title\":\"sssss\",\"viewcts\":92,\"status\":-1},{\"totalcount\":1,\"banner\":\"http://j.vzan.cc//images/vzanbg/small_ind_2.png?ver=636397966118333335\",\"Id\":1234567,\"starttime\":\"2017-09-21 16:07:34\",\"sort\":1,\"title\":\"sssss\",\"viewcts\":92,\"status\":-1}]"};// test
 var live_list_data = JSON.parse(live_list["data"]); 
 var live_list_status = '';
-*/
+
 var user_info = {
     "status":1,
     "data":{
@@ -60,7 +60,7 @@ var user_info = {
 };
 var user_name_receive = user_info["data"].nickname;
 var user_img_receive = user_info["data"].headimg;
-
+*/
 
 
 
@@ -84,10 +84,10 @@ $.ajax({
     complete: function () {  
   
     }  
-});  
+});
 
 
-/*
+
 var userId = "4e28b4bf-f98d-4825-97d9-ac086a57d2ee";
 var user_name_receive = '';
 var user_img_receive = '';
@@ -102,7 +102,7 @@ $.ajax({
 })
 
 
-*/
+
 
 
 
@@ -159,23 +159,22 @@ var app = new Vue({
         },
         clicktest:function(){
             this.live_room_id = arguments[0];
+            //alert(arguments[0]);
             var url = "http://172.20.18.241/live-yonyoucloud/live/getlive?liveId="+this.live_room_id;//利用直播间id拼接接口
-            
 /*            var  live_topic_data_test = {"status":1,"data":"{\"data\":{\"pushurl\":\"rtmp://pili-publish.vzan.com/vzanlive/131504476672337356?e=1508566067&token=ukF6gb319SJ-0vRruRI3Wo48W3-437u99TAw8bPn:AVev_uzkF3JGH7MmYWWx126hT8M=\",\"speaker\":\"\",\"rtmpurl\":\"\",\"banner\":\"http://j.vzan.cc//images/vzanbg/small_ind_2.png?ver=636397966118333335\",\"Id\":455686,\"starttime\":\"2017-09-21 16:07:34\",\"sort\":1,\"title\":\"sssss\",\"viewcts\":101,\"introduction\":\"\",\"status\":-1,\"hlsurl\":\"\"},\"status\":1}"};
             var a = live_topic_data_test["data"];
-            this.live_topic_data = JSON.parse(a)["data"];
-            alert(this.live_topic_data);//test data 代替ajax请求数据
-*/            
+            this.live_topic_data = JSON.parse(a)["data"];*/
             $.ajax({  
                 url: url,
+                async:false,
                 type: "get",   //请求方式是get   
                 dataType: "json", //数据类型是json型
                 success: function (live_topic) {   //成功时返回的data值，注意这个data是后台返回的值，上面的data是你要传给后台的值  
                             app.live_topic_data = JSON.parse(live_topic["data"])["data"];//json对象数组
                             //live_topic_status = live_topic[status];//成功与否
                 
-                            this.before_click = "none";
-                            this.after_click = "block";
+                            /*this.before_click = "none";
+                            this.after_click = "block";*/
                             
                         },  
                 error: function () {   
@@ -184,11 +183,11 @@ var app = new Vue({
                 complete: function () {  
   
                         }  
-            }); 
+            });
         
         
-            /*this.before_click = "none";
-            this.after_click = "inherit";*/
+            this.before_click = "none";
+            this.after_click = "block";
             
         },
         checkto_before:function(){
