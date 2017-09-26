@@ -87,7 +87,7 @@ $.ajax({
 });  
 
 
-
+/*
 var userId = "4e28b4bf-f98d-4825-97d9-ac086a57d2ee";
 var user_name_receive = '';
 var user_img_receive = '';
@@ -102,7 +102,7 @@ $.ajax({
 })
 
 
-
+*/
 
 
 
@@ -145,8 +145,8 @@ var app = new Vue({
         before_click: "inherit",
         after_click:"none",
         live_topic_data:'',//纪录直播话题纪录
-        user_name : user_name_receive,//直播间用户头像与昵称
-        user_img : user_img_receive 
+        //user_name : user_name_receive,//直播间用户头像与昵称
+        //user_img : user_img_receive 
         
     },
     methods:{
@@ -176,7 +176,7 @@ var app = new Vue({
                             //live_topic_status = live_topic[status];//成功与否
                 
                             this.before_click = "none";
-                            this.after_click = "blcok";
+                            this.after_click = "block";
                             
                         },  
                 error: function () {   
