@@ -39,6 +39,24 @@ public class LiveTenantEntity {
      * 直播间创建时间
      */
     private Date createTime;
+    
+    /**
+     * 创建者id
+     */
+    private String inviteUserId;
+    
+    /**
+     * 状态
+     */
+    private String status;
+    
+	public String getStatus() {
+		return status;
+	}
+
+	public void setStatus(String status) {
+		this.status = status;
+	}
 
 	public String getId() {
 		return id;
@@ -86,6 +104,14 @@ public class LiveTenantEntity {
 
 	public void setCreateTime(Date createTime) {
 		this.createTime = createTime;
+	}
+
+	public String getInviteUserId() {
+		return inviteUserId;
+	}
+
+	public void setInviteUserId(String inviteUserId) {
+		this.inviteUserId = inviteUserId;
 	}
 
 }

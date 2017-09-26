@@ -6,10 +6,11 @@
   <version>0.0.1-SNAPSHOT</version>
   <packaging>pom</packaging>
    <modules>
-    <module>live-sdk</module>
-   	<module>livecloud-sdk</module>
+	<module>livecloud-sdk</module>
 	<module>livecloud-service</module>
 	<module>livecloud-server</module>
+	<module>live-sdk</module>
+	<module>livecloud-web</module>
   </modules>
   <name>livecloud-parent</name>
   

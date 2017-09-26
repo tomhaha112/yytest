@@ -1,0 +1,73 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <link href="../styles/bootstrap.min.css" rel="stylesheet" type="text/css">
+        <link href="../styles/animate.css" rel="stylesheet" type="text/css">
+        <script src="../scripts/jquery-3.2.1.js"></script>
+        <script src="../scripts/bootstrap.min.js"></script>
+        <script src="../scripts/vue.js"></script>
+        <title>tab页</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        
+        <style>
+            .row.no-gutter {
+                margin-left: -15;
+                margin-right: -15;
+            }
+            .row.no-gutter > [class^='col-']{
+                padding-right: 0;
+                padding-left: 0;
+            }
+            .active{
+                background-color: red
+            }
+
+        </style>
+    </head>
+    <body>
+        <div id="app" class="container-fluid">
+            <div class="container-fluid" v-bind:style="{display : before_click}">  
+                <div class="row">
+                    <div class="col-xs-1 col-xs-offset-8">
+                        <img :src="user_img" width="22px"/>                        
+                    </div>
+                    <div class="col-xs-1">
+                        <span>{{ user_name }}</span>                        
+                    </div>
+                    <div class="col-xs-2">
+                        <input type="button" @click="change_to_vzanmanagement" value="vzan mng">
+                    </div>
+                </div>
+                
+                
+                <div class="row no-gutter">
+                    <div v-for="(value,key,index) in btns" class="col-xs-6">
+                        <button class="btn btn-block" v-bind:class="{active:(selectedindex===index)}" v-on:click="choosetab(index)">{{ value }}</button>
+                    </div>
+                </div>
+
+                <nav>
+                    <ul class="row" style="list-style: none" v-if="selectedindex===index" v-for="(value,key,index) in items" >
+                        <li v-for="(item,index) in value" class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
+                            <div v-on:click="clicktest(item.Id)" >第{{ index+1 }}个直播-{{ item.Id }}-{{ item.starttime }}</div>
+                        </li>
+                    </ul>
+                </nav>
+            </div> 
+            <div class="after_clicked_show" v-bind:style="{display : after_click}">
+                <div>
+                    直播间ID:{{ live_topic_data.Id }}<br/>
+                    直播间名字{{ live_topic_data.title }}<br/>
+                    直播开始时间{{ live_topic_data.starttime }}<br/>
+                    直播图片<img :src="live_topic_data.banner"/><br/>
+                </div>
+                
+                <button v-on:click="checkto_before">返回</button>
+            </div>
+            
+        </div>    
+
+        <script src="../scripts/main_success.js"></script>  
+    </body>
+</html>
