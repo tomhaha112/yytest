@@ -30,12 +30,14 @@ $.ajax({
     sunccess:function(user_info){
         user_name_receive = user_info["data"].nickname;
         user_img_receive = user_info["data"].headimg;
-    }
+    },  
+    error: function () {   
+                  
+    },  
+    complete: function () {  
+  
+    } 
 })
-
-
-
-
 
 
 var app = new Vue({
@@ -91,7 +93,8 @@ var app = new Vue({
         },
         clicktest:function(){
             this.live_room_id = arguments[0];
-            //alert(arguments[0]);
+            if(this.live_room_id===undefined){ alert("no id"); }
+            else{
             var url = "http://172.20.18.241/live-yonyoucloud/live/getlive?liveId="+this.live_room_id;//利用直播间id拼接接口
 /*            var  live_topic_data_test = {"status":1,"data":"{\"data\":{\"pushurl\":\"rtmp://pili-publish.vzan.com/vzanlive/131504476672337356?e=1508566067&token=ukF6gb319SJ-0vRruRI3Wo48W3-437u99TAw8bPn:AVev_uzkF3JGH7MmYWWx126hT8M=\",\"speaker\":\"\",\"rtmpurl\":\"\",\"banner\":\"http://j.vzan.cc//images/vzanbg/small_ind_2.png?ver=636397966118333335\",\"Id\":455686,\"starttime\":\"2017-09-21 16:07:34\",\"sort\":1,\"title\":\"sssss\",\"viewcts\":101,\"introduction\":\"\",\"status\":-1,\"hlsurl\":\"\"},\"status\":1}"};
             var a = live_topic_data_test["data"];
@@ -105,8 +108,8 @@ var app = new Vue({
                             app.live_topic_data = JSON.parse(live_topic["data"])["data"];//json对象数组
                             //live_topic_status = live_topic[status];//成功与否
                 
-                            /*this.before_click = "none";
-                            this.after_click = "block";*/
+                            this.before_click = "none";
+                            this.after_click = "inherit";
                             
                         },  
                 error: function () {   
@@ -116,11 +119,9 @@ var app = new Vue({
   
                         }  
             });
-        
-        
-            this.before_click = "none";
-            this.after_click = "block";
-            
+            /*this.before_click = "none";
+            this.after_click = "block";*/
+            } 
         },
         checkto_before:function(){
             this.before_click= "inherit";
