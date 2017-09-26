@@ -245,4 +245,29 @@ public class LiveAdminController {
 		}
 		return result;
 	}
+	
+	@RequestMapping(value = "/livedetail", method = {RequestMethod.GET, RequestMethod.POST})
+	public void livedetail(HttpServletRequest request,HttpServletResponse response) throws IOException {
+		try{
+			response.setContentType("text/html;charset=UTF-8");
+			String zbid = "";
+			String tenantId = request.getParameter("tenantId");
+			String appCloudId = request.getParameter("appCloudId");
+			if(StringUtils.isEmpty(tenantId) || StringUtils.isEmpty(appCloudId)){
+				response.getWriter().write("参数有误");
+				return;
+			}
+			ServiceResult<LiveTenantEntity> liveroomResult = liveRoomService.getLiveRoomByAppAndTenant(tenantId, appCloudId);
+			if(liveroomResult.isSuccess()){
+				zbid = liveroomResult.getResult().getLiveRoomId();
+			}else{
+				response.getWriter().write(liveroomResult.getMessage());
+				return;
+			}
+			response.sendRedirect("http://vzan.com/live/livedetail-" + zbid);
+		}catch (Exception e){
+			logger.error("跳转直播列表失败", e);
+		}
+		return;
+	}
 }
