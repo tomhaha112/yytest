@@ -50,7 +50,7 @@
 /*var live_list = {"status":1,"data":"[{\"totalcount\":1,\"banner\":\"http://j.vzan.cc//images/vzanbg/small_ind_2.png?ver=636397966118333335\",\"Id\":455686,\"starttime\":\"2017-09-21 16:07:34\",\"sort\":1,\"title\":\"sssss\",\"viewcts\":92,\"status\":-1},{\"totalcount\":1,\"banner\":\"http://j.vzan.cc//images/vzanbg/small_ind_2.png?ver=636397966118333335\",\"Id\":1234567,\"starttime\":\"2017-09-21 16:07:34\",\"sort\":1,\"title\":\"sssss\",\"viewcts\":92,\"status\":-1}]"};// test
 var live_list_data = JSON.parse(live_list["data"]); 
 var live_list_status = '';
-
+*/
 var user_info = {
     "status":1,
     "data":{
@@ -60,7 +60,7 @@ var user_info = {
 };
 var user_name_receive = user_info["data"].nickname;
 var user_img_receive = user_info["data"].headimg;
-*/
+
 
 
 
