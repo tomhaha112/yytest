@@ -145,8 +145,8 @@ var app = new Vue({
         before_click: "inherit",
         after_click:"none",
         live_topic_data:'',//纪录直播话题纪录
-        //user_name : user_name_receive,//直播间用户头像与昵称
-        //user_img : user_img_receive 
+        user_name : user_name_receive,//直播间用户头像与昵称
+        user_img : user_img_receive 
         
     },
     methods:{
