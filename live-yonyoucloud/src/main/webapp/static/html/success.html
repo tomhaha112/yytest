@@ -1,7 +1,7 @@
 <!DOCTYPE HTML>
 <html>
     <head>
-    	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <link href="../styles/bootstrap.min.css" rel="stylesheet" type="text/css">
         <link href="../styles/animate.css" rel="stylesheet" type="text/css">
         <script src="../scripts/jquery-3.2.1.js"></script>
@@ -27,7 +27,20 @@
     </head>
     <body>
         <div id="app" class="container-fluid">
-            <div class="container-fluid" v-bind:style="{display : before_click}">    
+            <div class="container-fluid" v-bind:style="{display : before_click}">  
+                <div class="row">
+                    <div class="col-xs-1 col-xs-offset-8">
+                        <img :src="user_img" width="22px"/>                        
+                    </div>
+                    <div class="col-xs-1">
+                        <span>{{ user_name }}</span>                        
+                    </div>
+                    <div class="col-xs-2">
+                        <input type="button" @click="change_to_vzanmanagement" value="vzan mng">
+                    </div>
+                </div>
+                
+                
                 <div class="row no-gutter">
                     <div v-for="(value,key,index) in btns" class="col-xs-6">
                         <button class="btn btn-block" v-bind:class="{active:(selectedindex===index)}" v-on:click="choosetab(index)">{{ value }}</button>
@@ -36,30 +49,24 @@
 
                 <nav>
                     <ul class="row" style="list-style: none" v-if="selectedindex===index" v-for="(value,key,index) in items" >
-                        <li v-for="(item,index) in value" class="aaa col-xs-12 col-sm-6 col-md-4 col-lg-3">
+                        <li v-for="(item,index) in value" class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
                             <div v-on:click="clicktest(item.Id)" >第{{ index+1 }}个直播-{{ item.Id }}-{{ item.starttime }}</div>
                         </li>
                     </ul>
                 </nav>
-            </div>
+            </div> 
             <div class="after_clicked_show" v-bind:style="{display : after_click}">
-                <p>test页面</p>
-                <p>{{live_topic_data.starttime}}</p>
-                
+                <div>
+                    直播间ID:{{ live_topic_data.Id }}<br/>
+                    直播间名字{{ live_topic_data.title }}<br/>
+                    直播开始时间{{ live_topic_data.starttime }}<br/>
+                    直播图片<img :src="live_topic_data.banner"/><br/>
+                </div>
                 
                 <button v-on:click="checkto_before">返回</button>
             </div>
             
         </div>    
- 
-<!--{
-    "status":1,
-    "data":"{
-        \"data\":{\"pushurl\":\"rtmp://pili-publish.vzan.com/vzanlive/131504476672337356?e=1508566067&token=ukF6gb319SJ-0vRruRI3Wo48W3-437u99TAw8bPn:AVev_uzkF3JGH7MmYWWx126hT8M=\",\"speaker\":\"\",\"rtmpurl\":\"\",\"banner\":\"http://j.vzan.cc//images/vzanbg/small_ind_2.png?ver=636397966118333335\",\"Id\":455686,\"starttime\":\"2017-09-21 16:07:34\",\"sort\":1,\"title\":\"sssss\",\"viewcts\":101,\"introduction\":\"\",\"status\":-1,\"hlsurl\":\"\"},
-        \"status\":1
-        }"
-}-->
-   
 
         <script src="../scripts/main_success.js"></script>  
     </body>
