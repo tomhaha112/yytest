@@ -108,8 +108,8 @@ var app = new Vue({
                             app.live_topic_data = JSON.parse(live_topic["data"])["data"];//json对象数组
                             //live_topic_status = live_topic[status];//成功与否
                 
-                            this.before_click = "none";
-                            this.after_click = "inherit";
+                            app.before_click = "none";
+                            app.after_click = "inherit";
                             
                         },  
                 error: function () {   
