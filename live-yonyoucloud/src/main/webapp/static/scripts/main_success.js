@@ -27,7 +27,7 @@ $.ajax({
     type:"get",
     async:false,
     dataType:"json",
-    sunccess:function(user_info){
+    success:function(user_info){
         user_name_receive = user_info["data"].nickname;
         user_img_receive = user_info["data"].headimg;
     },  
