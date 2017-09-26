@@ -94,6 +94,7 @@ var user_img_receive = '';
 $.ajax({
     url:"http://uastest.yyuap.com/livecloud_server/admin/l/getUserInfo?userId="+userId,
     type:"get",
+    async:false,
     dataType:"json",
     sunccess:function(data){
         user_name_receive = user_info["data"].nickname;
