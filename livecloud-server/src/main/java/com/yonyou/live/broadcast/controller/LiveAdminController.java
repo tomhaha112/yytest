@@ -32,7 +32,7 @@ import com.yonyou.yht.sdkutils.JsonResponse;
 @RequestMapping(value = "/admin/l")
 public class LiveAdminController {
 
-	private final Logger logger = LoggerFactory.getLogger(this.getClass());
+	private static final Logger logger = LoggerFactory.getLogger(LiveAdminController.class);
 	
 	@Autowired
 	LiveService liveService;
