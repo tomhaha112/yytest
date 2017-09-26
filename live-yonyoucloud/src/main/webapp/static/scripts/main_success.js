@@ -159,24 +159,23 @@ var app = new Vue({
         },
         clicktest:function(){
             this.live_room_id = arguments[0];
-            //alert(arguments[0]);
             var url = "http://172.20.18.241/live-yonyoucloud/live/getlive?liveId="+this.live_room_id;//利用直播间id拼接接口
-            var  live_topic_data_test = {"status":1,"data":"{\"data\":{\"pushurl\":\"rtmp://pili-publish.vzan.com/vzanlive/131504476672337356?e=1508566067&token=ukF6gb319SJ-0vRruRI3Wo48W3-437u99TAw8bPn:AVev_uzkF3JGH7MmYWWx126hT8M=\",\"speaker\":\"\",\"rtmpurl\":\"\",\"banner\":\"http://j.vzan.cc//images/vzanbg/small_ind_2.png?ver=636397966118333335\",\"Id\":455686,\"starttime\":\"2017-09-21 16:07:34\",\"sort\":1,\"title\":\"sssss\",\"viewcts\":101,\"introduction\":\"\",\"status\":-1,\"hlsurl\":\"\"},\"status\":1}"};
             
+/*            var  live_topic_data_test = {"status":1,"data":"{\"data\":{\"pushurl\":\"rtmp://pili-publish.vzan.com/vzanlive/131504476672337356?e=1508566067&token=ukF6gb319SJ-0vRruRI3Wo48W3-437u99TAw8bPn:AVev_uzkF3JGH7MmYWWx126hT8M=\",\"speaker\":\"\",\"rtmpurl\":\"\",\"banner\":\"http://j.vzan.cc//images/vzanbg/small_ind_2.png?ver=636397966118333335\",\"Id\":455686,\"starttime\":\"2017-09-21 16:07:34\",\"sort\":1,\"title\":\"sssss\",\"viewcts\":101,\"introduction\":\"\",\"status\":-1,\"hlsurl\":\"\"},\"status\":1}"};
             var a = live_topic_data_test["data"];
             this.live_topic_data = JSON.parse(a)["data"];
             alert(this.live_topic_data);//test data 代替ajax请求数据
+*/            
             $.ajax({  
                 url: url,
-                async:false,
                 type: "get",   //请求方式是get   
                 dataType: "json", //数据类型是json型
                 success: function (live_topic) {   //成功时返回的data值，注意这个data是后台返回的值，上面的data是你要传给后台的值  
                             app.live_topic_data = JSON.parse(live_topic["data"])["data"];//json对象数组
                             //live_topic_status = live_topic[status];//成功与否
                 
-                            app.before_click = "none";
-                            app.after_click = "block";
+                            this.before_click = "none";
+                            this.after_click = "block";
                             
                         },  
                 error: function () {   
