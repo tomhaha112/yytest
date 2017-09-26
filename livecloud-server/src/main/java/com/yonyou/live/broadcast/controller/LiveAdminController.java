@@ -79,13 +79,17 @@ public class LiveAdminController {
 			@RequestParam(value="sweepkey") String sweepKey, HttpServletRequest request,
 			HttpServletResponse response) {
 		JsonResponse result = new JsonResponse();
+		String msg = "";
 		try{
 			String zbid = "";
 			String inviteUserId = "";
 			String[] arr = sweepcode.split("@");
 			if(arr.length != 2){
 //				return result.failedWithReturn("参数异常");
-				response.getWriter().write("参数异常");
+//				response.getWriter().write("参数异常");
+				msg = "参数异常";
+				request.setAttribute("result", msg);
+				return "index";
 			}else{
 				zbid = arr[0].substring(9);
 				inviteUserId = arr[1];
@@ -95,7 +99,10 @@ public class LiveAdminController {
 			String cacheUser = jedisTemplate.get(qrcodeCacheKey);
 			if(StringUtils.isEmpty(cacheUser)){
 //				return result.failedWithReturn("超时，请重新扫码");
-				response.getWriter().write("超时，请重新扫码");
+//				response.getWriter().write("超时，请重新扫码");
+				msg = "超时，请重新扫码";
+				request.setAttribute("result", msg);
+				return "index";
 			}
 			
 			String[] cacheUserArray = cacheUser.split("&");
@@ -115,7 +122,10 @@ public class LiveAdminController {
 			} catch (ServiceException e) {
 				logger.error(e.getMessage());
 //				return result.failedWithReturn("请求失败");
-				response.getWriter().write("请求失败");
+//				response.getWriter().write("请求失败");
+				msg = "请求失败";
+				request.setAttribute("result", msg);
+				return "index";
 			}
 			
 			JSONObject resultJSON = (JSONObject) JSONObject.parse(httpResult);
@@ -133,7 +143,10 @@ public class LiveAdminController {
 					ServiceResult<LiveTenantEntity> updateResult = liveRoomService.UpdateEntity(existEntity);
 					if(!updateResult.isSuccess()){
 //						return result.failedWithReturn(updateResult.getMessage());
-						response.getWriter().write(updateResult.getMessage());
+//						response.getWriter().write(updateResult.getMessage());
+						msg = updateResult.getMessage();
+						request.setAttribute("result", msg);
+						return "index";
 					}
 				}else{
 					//不存在 新增
@@ -146,7 +159,10 @@ public class LiveAdminController {
 					ServiceResult<LiveTenantEntity> inviteEntityResult = liveRoomService.getLiveRoomByEntity(paramEntity);
 					if(!inviteEntityResult.isSuccess()){
 //						return result.failedWithReturn(inviteEntityResult.getMessage());
-						response.getWriter().write(inviteEntityResult.getMessage());
+//						response.getWriter().write(inviteEntityResult.getMessage());
+						msg = inviteEntityResult.getMessage();
+						request.setAttribute("result", msg);
+						return "index";
 					}
 					LiveTenantEntity inviteEntity = inviteEntityResult.getResult();
 					
@@ -159,13 +175,16 @@ public class LiveAdminController {
 					tenantEntity.setLiveRoomId(zbid);
 					liveRoomService.insertLiveRoom(tenantEntity);
 				}
-				
-				result.successWithData("data", resultJSON.get("Msg"));
+				msg = resultJSON.getString("Msg");
+//				result.successWithData("data", resultJSON.get("Msg"));
 			}else{
 				if (StringUtils.isNotEmpty(resultJSON.getString("code")) && StringUtils.isNotEmpty(resultJSON.getString("Msg"))) {
 					logger.error("创建子管理员返回码:" + resultJSON.getString("code") + "\br" + "错误信息:" + resultJSON.getString("Msg"));
 				}
-				result.failedWithReturn(resultJSON.getString("Msg"));
+//				result.failedWithReturn(resultJSON.getString("Msg"));
+				msg = resultJSON.getString("Msg");
+				request.setAttribute("result", msg);
+				return "index";
 			}
 			request.setAttribute("result", resultJSON.getString("Msg"));
 		} catch(Exception e){
