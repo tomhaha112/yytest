@@ -1,71 +1,3 @@
-/*
-{
-    "status":1,
-    "data":"[
-    {
-        \"totalcount\":1,
-        \"banner\":\"http://j.vzan.cc//images/vzanbg/small_ind_2.png?ver=636397966118333335\",
-        \"Id\":455686,
-        \"starttime\":\"2017-09-21 16:07:34\",
-        \"sort\":1,
-        \"title\":\"sssss\",
-        \"viewcts\":27,
-        \"status\":-1
-    }
-    ]"
-}//直播列表数据
-
-{
-    "status":1,
-    "data":"{
-        \"data\":{
-                \"pushurl\":\"rtmp://pili-publish.vzan.com/vzanlive/131504476672337356?e=1508566067&token=ukF6gb319SJ-0vRruRI3Wo48W3-437u99TAw8bPn:AVev_uzkF3JGH7MmYWWx126hT8M=\",
-                \"speaker\":\"\",
-                \"rtmpurl\":\"\",
-                \"banner\":\"http://j.vzan.cc//images/vzanbg/small_ind_2.png?ver=636397966118333335\",
-                \"Id\":455686,
-                \"starttime\":\"2017-09-21 16:07:34\",
-                \"sort\":1,
-                \"title\":\"sssss\",
-                \"viewcts\":101,
-                \"introduction\":\"\",
-                \"status\":-1,
-                \"hlsurl\":\"\"
-                },
-        \"status\":1
-    }"
-}//直播话题
-
-{
-    "status":1,
-    "data":{
-        "headimg":"https://cdn.yonyoucloud.com/dev/yht/style/images/user.jpg",
-        "nickname":"董俊超"
-    }
-}//直播间用户头像与昵称
-*/
-
-
-
-/*var live_list = {"status":1,"data":"[{\"totalcount\":1,\"banner\":\"http://j.vzan.cc//images/vzanbg/small_ind_2.png?ver=636397966118333335\",\"Id\":455686,\"starttime\":\"2017-09-21 16:07:34\",\"sort\":1,\"title\":\"sssss\",\"viewcts\":92,\"status\":-1},{\"totalcount\":1,\"banner\":\"http://j.vzan.cc//images/vzanbg/small_ind_2.png?ver=636397966118333335\",\"Id\":1234567,\"starttime\":\"2017-09-21 16:07:34\",\"sort\":1,\"title\":\"sssss\",\"viewcts\":92,\"status\":-1}]"};// test
-var live_list_data = JSON.parse(live_list["data"]); 
-var live_list_status = '';
-
-var user_info = {
-    "status":1,
-    "data":{
-        "headimg":"https://cdn.yonyoucloud.com/dev/yht/style/images/user.jpg",
-        "nickname":"董俊超"
-    }
-};
-var user_name_receive = user_info["data"].nickname;
-var user_img_receive = user_info["data"].headimg;
-*/
-
-
-
-
-
 var live_list_data='';
 var live_list_status='';
 var tenantId = "rzfx6m98";
@@ -87,7 +19,6 @@ $.ajax({
 });
 
 
-
 var userId = "4e28b4bf-f98d-4825-97d9-ac086a57d2ee";
 var user_name_receive = '';
 var user_img_receive = '';
@@ -96,7 +27,7 @@ $.ajax({
     type:"get",
     async:false,
     dataType:"json",
-    sunccess:function(data){
+    sunccess:function(user_info){
         user_name_receive = user_info["data"].nickname;
         user_img_receive = user_info["data"].headimg;
     }
