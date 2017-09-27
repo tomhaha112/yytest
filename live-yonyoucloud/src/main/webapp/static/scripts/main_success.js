@@ -2,7 +2,7 @@ var live_list_data='';
 var live_list_status='';
 var tenantId = "rzfx6m98";
 $.ajax({  
-    url: "/live-yonyoucloud/live/getlives?tenantId="+tenantId+"&pageNum=1&pageSize=10",//后台提供的接口 绝对路径
+    url: "/live-yonyoucloud/live/getlives?tenantId="+tenantId+"&pageNum=1&pageSize=10",//后台提供的接口 修改为绝对路径
     async:false,
     type: "get",   //请求方式是get   
     dataType: "json", //数据类型是json型
