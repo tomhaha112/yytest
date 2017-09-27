@@ -66,7 +66,7 @@ public class LiveController {
 	 * @return
 	 */
 	@RequestMapping(value = "/create", method = RequestMethod.GET)
-	public JsonResponse createLiveRoom(String userId,String tenantId,String sitename, String sitelogo) {
+	public JsonResponse createLiveRoom(String userId,String tenantId,String sitename, String sitelogo, String levels) {
 		JsonResponse result = new JsonResponse();
 		String data = "";
 		try {
@@ -90,7 +90,7 @@ public class LiveController {
 			}
 			
 			String nickname = userJSON.getString("userName");
-			data = liveService.createLiveRoom(userId, nickname, headimg, sitelogo, sitename, tenantId);
+			data = liveService.createLiveRoom(userId, nickname, headimg, sitelogo, sitename, tenantId, levels);
 		} catch (ServiceException e) {
 			e.printStackTrace();
 			result.failed("访问直播失败");

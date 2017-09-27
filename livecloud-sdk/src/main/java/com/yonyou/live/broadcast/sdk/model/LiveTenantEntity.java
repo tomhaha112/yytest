@@ -50,6 +50,11 @@ public class LiveTenantEntity {
      */
     private String status;
     
+    /**
+     * 1基础版  2专业版  3旗舰版
+     */
+    private String levels;
+    
 	public String getStatus() {
 		return status;
 	}
@@ -114,4 +119,12 @@ public class LiveTenantEntity {
 		this.inviteUserId = inviteUserId;
 	}
 
+	public String getLevels() {
+		return levels;
+	}
+
+	public void setLevels(String levels) {
+		this.levels = levels;
+	}
+	
 }

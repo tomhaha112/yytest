@@ -174,6 +174,7 @@ public class LiveAdminController {
 					tenantEntity.setCreateTime(new Date());
 					tenantEntity.setInviteUserId(inviteUserId);
 					tenantEntity.setLiveRoomId(zbid);
+					tenantEntity.setLevels(inviteEntity.getLevels());
 					liveRoomService.insertLiveRoom(tenantEntity);
 				}
 				msg = resultJSON.getString("Msg");

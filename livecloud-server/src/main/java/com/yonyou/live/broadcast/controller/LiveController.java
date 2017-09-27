@@ -128,7 +128,8 @@ public class LiveController {
 		String sitelogo = json.getString("sitelogo");
 		String sitename = json.getString("sitename");
 		String tenantId = json.getString("tenantId");
-		if(StringUtils.isAnyEmpty(new String[]{userId,nickname,sitename,headimg,sitelogo,tenantId})){
+		String levels = json.getString("levels");
+		if(StringUtils.isAnyEmpty(new String[]{userId,nickname,sitename,headimg,sitelogo,tenantId,levels})){
 			return result.failedWithReturn("参数有误");
 		}
 		String tenantResult = com.yonyou.iuap.tenant.sdk.UserCenter.isAdminNew(tenantId, userId);
@@ -161,6 +162,7 @@ public class LiveController {
 			tenantEntity.setAppcloudId(appCloudId);
 			tenantEntity.setCreateTime(new Date());
 			tenantEntity.setLiveRoomId(liveRoomId);
+			tenantEntity.setLevels(levels);
 			liveRoomService.insertLiveRoom(tenantEntity);
 			result.successWithData("data", resultJSON.get("Msg"));
 		}else {

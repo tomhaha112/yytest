@@ -28,6 +28,7 @@ public interface LiveRemotService {
 			@ParamAttr(location = ParamAttr.Location.JSON_CONTENT, paramKey = "headimg") final String headimg,
 			@ParamAttr(location = ParamAttr.Location.JSON_CONTENT, paramKey = "sitelogo") final String sitelogo,
 			@ParamAttr(location = ParamAttr.Location.JSON_CONTENT, paramKey = "sitename") final String sitename,
-			@ParamAttr(location = ParamAttr.Location.JSON_CONTENT, paramKey = "tenantId") final String tenantId)
+			@ParamAttr(location = ParamAttr.Location.JSON_CONTENT, paramKey = "tenantId") final String tenantId,
+			@ParamAttr(location = ParamAttr.Location.JSON_CONTENT, paramKey = "levels") final String levels)
 			throws ServiceException;
 }

@@ -29,18 +29,20 @@ public class RedirectController {
 	public void vzan(HttpServletRequest request, HttpServletResponse response) {
 		try {
 			String userId = "";
+			String tenantId = "";
 			AttributePrincipal principal = (AttributePrincipal) request
 					.getUserPrincipal();
 			if (principal != null) {
 				Map<String, Object> attrMap = principal.getAttributes();
 				userId = (String) attrMap.get("userId");
+				tenantId = (String) attrMap.get("tenantId");
 				String serverUrl = PropertyUtil
 						.getPropertyByKey("pom.vzan.server.url");
 
 				String url = serverUrl
 						+ "/livecloud_server/admin/l/getliveAdmin?userId="
 						+ userId
-						+ "&tenantId=rzfx6m98&callback=callback&appId=1eee";
+						+ "&tenantId=" + tenantId + "&callback=callback&appId=1eee";
 				response.sendRedirect(url);
 				return;
 			} else {

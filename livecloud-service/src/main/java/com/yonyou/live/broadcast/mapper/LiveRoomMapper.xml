@@ -11,12 +11,13 @@
 		<result column="createTime" jdbcType="TIMESTAMP" property="createTime" />
 		<result column="inviteUserId" jdbcType="VARCHAR" property="inviteUserId" />
 		<result column="status" jdbcType="VARCHAR" property="status" />
+		<result column="levels" jdbcType="VARCHAR" property="levels" />
 	</resultMap>
 	
 	
 	<sql id="Base_Column_List">
 		id, appcloudId, tenantId, adminId, 
-		liveRoomId, createTime, inviteUserId, status
+		liveRoomId, createTime, inviteUserId, status, levels
 	</sql>
 	
 	<select id="getLiveRoomByTenant" parameterType="Map"
@@ -73,7 +74,7 @@
 	
 	<insert id="insertLiveRoomEntity" parameterType="com.yonyou.live.broadcast.sdk.model.LiveTenantEntity">
 	  insert into live_tenant_room
-	  (appcloudId,tenantId,adminId,liveRoomId,createTime,inviteUserId)
+	  (appcloudId,tenantId,adminId,liveRoomId,createTime,inviteUserId,levels)
 	  values
 	  (
 	  #{appcloudId,jdbcType=VARCHAR},
@@ -81,7 +82,8 @@
 	   #{adminId,jdbcType=VARCHAR},
 	   #{liveRoomId,jdbcType=VARCHAR},
 	   #{createTime,jdbcType=DATE},
-	   #{inviteUserId,jdbcType=VARCHAR}
+	   #{inviteUserId,jdbcType=VARCHAR},
+	   #{levels,jdbcType=VARCHAR}
 	  )
 	</insert>
 	
@@ -110,6 +112,9 @@
 			</if>
 			<if test="status != null">
 				t.status = #{status,jdbcType=VARCHAR},
+			</if>
+			<if test="levels != null">
+				t.levels = #{levels,jdbcType=VARCHAR},
 			</if>
 		</set>
 		<where>
