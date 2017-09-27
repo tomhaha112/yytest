@@ -61,29 +61,29 @@ public class TestController {
 	 * 创建直播间
 	 * @return
 	 */
-	@RequestMapping(value = "/create", method = RequestMethod.GET)
-	public JsonResponse createLiveRoom(String userId,String tenantId,String sitename) {
-		JsonResponse result = new JsonResponse();
-		String data = "";
-		try {
-			String user = com.yonyou.yht.sdk.UserCenter.getUserById(userId);
-			if(StringUtils.isEmpty(user)){
-			    return result.failedWithReturn("友互通连接异常");
-			}
-			JSONObject userJSON = JSONObject.parseObject(user).getJSONObject("user");
-			if(StringUtils.isEmpty(userJSON.getString("userId"))){
-				return result.failedWithReturn("用户查询异常");
-			}
-			String nickname = userJSON.getString("userName");
-			String headimg = "https://iuap-market-test.oss-cn-beijing.aliyuncs.com/userphoto-efefefefefef.jpg";
-			String sitelogo = "https://iuap-market-test.oss-cn-beijing.aliyuncs.com/userphoto-a7ecc96a-7ab0-4a01-a966-24baae219fb6.jpg";
-			data = liveService.createLiveRoom(userId, nickname, headimg, sitelogo, sitename, tenantId);
-		} catch (ServiceException e) {
-			e.printStackTrace();
-			result.failed("访问直播失败");
-		}
-		result.successWithData("data", data);
-		return result;
-	}
+//	@RequestMapping(value = "/create", method = RequestMethod.GET)
+//	public JsonResponse createLiveRoom(String userId,String tenantId,String sitename) {
+//		JsonResponse result = new JsonResponse();
+//		String data = "";
+//		try {
+//			String user = com.yonyou.yht.sdk.UserCenter.getUserById(userId);
+//			if(StringUtils.isEmpty(user)){
+//			    return result.failedWithReturn("友互通连接异常");
+//			}
+//			JSONObject userJSON = JSONObject.parseObject(user).getJSONObject("user");
+//			if(StringUtils.isEmpty(userJSON.getString("userId"))){
+//				return result.failedWithReturn("用户查询异常");
+//			}
+//			String nickname = userJSON.getString("userName");
+//			String headimg = "https://iuap-market-test.oss-cn-beijing.aliyuncs.com/userphoto-efefefefefef.jpg";
+//			String sitelogo = "https://iuap-market-test.oss-cn-beijing.aliyuncs.com/userphoto-a7ecc96a-7ab0-4a01-a966-24baae219fb6.jpg";
+//			data = liveService.createLiveRoom(userId, nickname, headimg, sitelogo, sitename, tenantId);
+//		} catch (ServiceException e) {
+//			e.printStackTrace();
+//			result.failed("访问直播失败");
+//		}
+//		result.successWithData("data", data);
+//		return result;
+//	}
 	
 }
