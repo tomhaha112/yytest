@@ -68,7 +68,8 @@ public class LiveAdminController {
 		}
 		long currentTime = System.currentTimeMillis()/1000;
 		String sign = MD5Utils.getSign(currentTime);
-		String url = "http://tliveapi.vzan.com/VZLive/UrlRedirect?zbid="+liveResult.getResult().getLiveRoomId();
+		String vZanServer = PropertyUtil.getPropertyByKey("vzan.server.url");
+		String url = vZanServer+"/VZLive/UrlRedirect?zbid="+liveResult.getResult().getLiveRoomId();
 		response.sendRedirect(url+"&sign="+sign+"&timestamp="+currentTime+"&userId="+userId);//+"&key=yonyouyun"  key不需要
 		return result;
 	}

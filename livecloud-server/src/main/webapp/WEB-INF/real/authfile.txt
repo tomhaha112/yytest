@@ -1,0 +1,5 @@
+appId=a96fe764-9864-11e7-ad80-06341c000d9c
+key=a96fe857-9864-11e7-ad80-06341c000d9c
+username=livecloud
+expiredTs=1536787176000
+expiredDate=2018-09-13 05:19:36
