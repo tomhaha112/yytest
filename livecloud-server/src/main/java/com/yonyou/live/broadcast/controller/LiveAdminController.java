@@ -287,6 +287,5 @@ public class LiveAdminController {
 		}catch (Exception e){
 			logger.error("跳转直播列表失败", e);
 		}
-		return;
 	}
 }

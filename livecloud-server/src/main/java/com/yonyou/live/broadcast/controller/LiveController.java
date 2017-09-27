@@ -140,6 +140,7 @@ public class LiveController {
 			return result.failedWithReturn("该用户没有权限");
 		}
 		String vZanServer = PropertyUtil.getPropertyByKey("vzan.server.url");
+		// /VZLive/CreateSite  接口增加levels参数  1基础版  2专业版  3旗舰版
 		String liveUrl = vZanServer + "/VZLive/CreateSite";
 		long currentTime = System.currentTimeMillis()/1000;
 		String sign = MD5Utils.getSign(currentTime);
