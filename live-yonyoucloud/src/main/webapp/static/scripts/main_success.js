@@ -23,7 +23,8 @@ var userId = "4e28b4bf-f98d-4825-97d9-ac086a57d2ee";
 var user_name_receive = '';
 var user_img_receive = '';
 $.ajax({
-    url:"http://uastest.yyuap.com/livecloud_server/admin/l/getUserInfo?userId="+userId,
+	//http://uastest.yyuap.com
+    url:"/livecloud_server/admin/l/getUserInfo?userId="+userId,
     type:"get",
     async:false,
     dataType:"json",
@@ -95,7 +96,8 @@ var app = new Vue({
             this.live_room_id = arguments[0];
             if(this.live_room_id===undefined){ alert("no id"); }
             else{
-            var url = "http://172.20.18.241/live-yonyoucloud/live/getlive?liveId="+this.live_room_id;//利用直播间id拼接接口
+            //http://172.20.18.241
+            var url = "/live-yonyoucloud/live/getlive?liveId="+this.live_room_id;//利用直播间id拼接接口
 /*            var  live_topic_data_test = {"status":1,"data":"{\"data\":{\"pushurl\":\"rtmp://pili-publish.vzan.com/vzanlive/131504476672337356?e=1508566067&token=ukF6gb319SJ-0vRruRI3Wo48W3-437u99TAw8bPn:AVev_uzkF3JGH7MmYWWx126hT8M=\",\"speaker\":\"\",\"rtmpurl\":\"\",\"banner\":\"http://j.vzan.cc//images/vzanbg/small_ind_2.png?ver=636397966118333335\",\"Id\":455686,\"starttime\":\"2017-09-21 16:07:34\",\"sort\":1,\"title\":\"sssss\",\"viewcts\":101,\"introduction\":\"\",\"status\":-1,\"hlsurl\":\"\"},\"status\":1}"};
             var a = live_topic_data_test["data"];
             this.live_topic_data = JSON.parse(a)["data"];*/
