@@ -1,6 +1,11 @@
 package com.yonyou.live.controller;
 
+import java.util.Map;
+
+import javax.servlet.http.HttpServletRequest;
+
 import org.apache.commons.lang3.StringUtils;
+import org.jasig.cas.client.authentication.AttributePrincipal;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -66,10 +71,20 @@ public class LiveController {
 	 * @return
 	 */
 	@RequestMapping(value = "/create", method = RequestMethod.GET)
-	public JsonResponse createLiveRoom(String userId,String tenantId,String sitename, String sitelogo, String levels) {
+	public JsonResponse createLiveRoom(HttpServletRequest request, String sitename, String sitelogo, String levels) {
 		JsonResponse result = new JsonResponse();
 		String data = "";
 		try {
+			String userId = "";
+			String tenantId = "";
+			AttributePrincipal principal = (AttributePrincipal) request
+					.getUserPrincipal();
+			if (principal != null) {
+				Map<String, Object> attrMap = principal.getAttributes();
+				userId = (String) attrMap.get("userId");
+				tenantId = (String) attrMap.get("tenantId");
+			}
+			
 			String user = com.yonyou.yht.sdk.UserCenter.getUserById(userId);
 			if(StringUtils.isEmpty(user)){
 			    return result.failedWithReturn("友互通连接异常");
