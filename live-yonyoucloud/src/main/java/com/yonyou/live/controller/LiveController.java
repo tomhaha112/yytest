@@ -1,8 +1,12 @@
 package com.yonyou.live.controller;
 
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+import java.util.Date;
 import java.util.Map;
 
 import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 
 import org.apache.commons.lang3.StringUtils;
 import org.jasig.cas.client.authentication.AttributePrincipal;
@@ -12,8 +16,10 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.alibaba.fastjson.JSONArray;
 import com.alibaba.fastjson.JSONObject;
 import com.yonyou.iuap.payment.sdk.common.ServiceException;
+import com.yonyou.iuap.tenant.sdk.TenantCenter;
 import com.yonyou.live.sdk.service.LiveRemotService;
 import com.yonyou.yht.sdk.UserCenter;
 import com.yonyou.yht.sdkutils.JsonResponse;
@@ -109,8 +115,30 @@ public class LiveController {
 			if(StringUtils.isNoneEmpty(data)){
 				JSONObject resultData = JSONObject.parseObject(data);
 				if(resultData.containsKey("isok") && resultData.getBooleanValue("isok")){
-					
+					JSONObject json = new JSONObject();
+			        json.put("tenantId", tenantId);
+			        json.put("resCode", "livecloud");
+			        
+			        json.put("beginDate", "2017-01-11 15:48:43");
+			        json.put("endDate", "2018-05-01 15:48:43");
+			        JSONArray jsonArray = new JSONArray();
+			        jsonArray.add(json);
+			        String stringBathOpenApp = TenantCenter.StringBathOpenApp(jsonArray.toString());
+			        if(StringUtils.isNoneEmpty(stringBathOpenApp)){
+			        	JSONObject resultJSON = JSONObject.parseObject(stringBathOpenApp);
+			        	JSONArray array =  (JSONArray) resultJSON.get("success");
+			        	if(array.size() == 0){
+			        		return result.failedWithReturn("租户开通云直播失败");
+			        	}
+			        }else{
+			        	return result.failedWithReturn("租户开通云直播异常");
+			        }
+			        
+				}else{
+					return result.failedWithReturn("创建直播间失败");
 				}
+			}else{
+				return result.failedWithReturn("创建直播间异常");
 			}
 		} catch (ServiceException e) {
 			e.printStackTrace();
@@ -120,4 +148,43 @@ public class LiveController {
 		return result;
 	}
 	
+	@RequestMapping(value = "/createTenant", method = RequestMethod.GET)
+    public JsonResponse testBatchOpen(HttpServletRequest request,HttpServletResponse response){
+		JsonResponse result = new JsonResponse();
+		String userId = "";
+		AttributePrincipal principal = (AttributePrincipal) request
+				.getUserPrincipal();
+		if (principal != null) {
+			Map<String, Object> attrMap = principal.getAttributes();
+			userId = (String) attrMap.get("userId");
+			String appCode = request.getParameter("appCode");
+			String tenantResult = TenantCenter.getTenantByTenantCode(appCode);
+			if(StringUtils.isNoneBlank(tenantResult)){
+				String tenantId = ((JSONObject)JSONObject.parse(((JSONObject)JSONObject.parse(tenantResult)).getString("tenant"))).getString("tenantId");
+				JSONObject json = new JSONObject();
+		        json.put("tenantId", tenantId);
+		        json.put("resCode", "livecloud");
+		        Date date = new Date();
+		        SimpleDateFormat sf = new SimpleDateFormat("yyyy-MM-dd hh:mm:ss");
+		        String biginDate =  sf.format(date);
+		        Calendar calendar = Calendar.getInstance();
+		        calendar.setTime(date);
+//		        calendar.add(Calendar.WEEK_OF_YEAR, -1);
+		        calendar.add(Calendar.YEAR, 1);
+		        date = calendar.getTime();
+		        String endDate = sf.format(date);
+		        json.put("beginDate", biginDate);
+		        json.put("endDate", endDate);
+		        JSONArray jsonArray = new JSONArray();
+		        jsonArray.add(json);
+		        String stringBathOpenApp = TenantCenter.StringBathOpenApp(jsonArray.toString());
+		        result.put("data", stringBathOpenApp);
+			}else{
+				result.put("data", "租户不存在");
+			}
+		} else {
+			result.put("data", "拦截异常");
+		}
+		return result;
+	}
 }
