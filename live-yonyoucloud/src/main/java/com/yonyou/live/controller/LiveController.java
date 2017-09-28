@@ -106,6 +106,12 @@ public class LiveController {
 			
 			String nickname = userJSON.getString("userName");
 			data = liveService.createLiveRoom(userId, nickname, headimg, sitelogo, sitename, tenantId, levels);
+			if(StringUtils.isNoneEmpty(data)){
+				JSONObject resultData = JSONObject.parseObject(data);
+				if(resultData.containsKey("isok") && resultData.getBooleanValue("isok")){
+					
+				}
+			}
 		} catch (ServiceException e) {
 			e.printStackTrace();
 			result.failed("访问直播失败");
