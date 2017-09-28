@@ -118,9 +118,16 @@ public class LiveController {
 					JSONObject json = new JSONObject();
 			        json.put("tenantId", tenantId);
 			        json.put("resCode", "livecloud");
-			        
-			        json.put("beginDate", "2017-01-11 15:48:43");
-			        json.put("endDate", "2018-05-01 15:48:43");
+			        Date date = new Date();
+			        SimpleDateFormat sf = new SimpleDateFormat("yyyy-MM-dd hh:mm:ss");
+			        String biginDate =  sf.format(date);
+			        Calendar calendar = Calendar.getInstance();
+			        calendar.setTime(date);
+			        calendar.add(Calendar.YEAR, 1);
+			        date = calendar.getTime();
+			        String endDate = sf.format(date);
+			        json.put("beginDate", biginDate);
+			        json.put("endDate", endDate);
 			        JSONArray jsonArray = new JSONArray();
 			        jsonArray.add(json);
 			        String stringBathOpenApp = TenantCenter.StringBathOpenApp(jsonArray.toString());
@@ -169,7 +176,6 @@ public class LiveController {
 		        String biginDate =  sf.format(date);
 		        Calendar calendar = Calendar.getInstance();
 		        calendar.setTime(date);
-//		        calendar.add(Calendar.WEEK_OF_YEAR, -1);
 		        calendar.add(Calendar.YEAR, 1);
 		        date = calendar.getTime();
 		        String endDate = sf.format(date);

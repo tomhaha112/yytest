@@ -50,8 +50,8 @@
 	</bean>
 	
 	<bean id="payClientRemoteAuthStrategy" class="com.yonyou.iuap.payment.sdk.auth.PayClientRemoteAuthStrategy">
- 		<property name="cloudId" value="1eee"/>
- 		<property name="privateKey" value="sss"/>
+ 		<property name="cloudId" value="${pom.yypay.cloudId}"/>
+ 		<property name="privateKey" value="${pom.yypay.privateKey}"/>
  	</bean>
 	
 </beans>
