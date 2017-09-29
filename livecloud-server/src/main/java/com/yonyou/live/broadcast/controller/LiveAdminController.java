@@ -285,7 +285,7 @@ public class LiveAdminController {
 				response.getWriter().write(liveroomResult.getMessage());
 				return;
 			}
-			response.sendRedirect("http://vzan.com/live/livedetail-" + zbid);
+			response.sendRedirect("http://vt.vzan.com/live/livedetail-" + zbid);
 		}catch (Exception e){
 			logger.error("跳转直播列表失败", e);
 		}
