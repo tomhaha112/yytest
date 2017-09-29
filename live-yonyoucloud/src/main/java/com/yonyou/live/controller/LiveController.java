@@ -77,18 +77,16 @@ public class LiveController {
 	 * @return
 	 */
 	@RequestMapping(value = "/create", method = RequestMethod.GET)
-	public JsonResponse createLiveRoom(HttpServletRequest request, String sitename, String sitelogo, String levels) {
+	public JsonResponse createLiveRoom(HttpServletRequest request, String tenantId,String sitename, String sitelogo, String levels) {
 		JsonResponse result = new JsonResponse();
 		String data = "";
 		try {
 			String userId = "";
-			String tenantId = "";
 			AttributePrincipal principal = (AttributePrincipal) request
 					.getUserPrincipal();
 			if (principal != null) {
 				Map<String, Object> attrMap = principal.getAttributes();
 				userId = (String) attrMap.get("userId");
-				tenantId = (String) attrMap.get("tenantId");
 			}
 			
 			String user = com.yonyou.yht.sdk.UserCenter.getUserById(userId);
@@ -114,7 +112,7 @@ public class LiveController {
 			data = liveService.createLiveRoom(userId, nickname, headimg, sitelogo, sitename, tenantId, levels);
 			if(StringUtils.isNoneEmpty(data)){
 				JSONObject resultData = JSONObject.parseObject(data);
-				if(resultData.containsKey("isok") && resultData.getBooleanValue("isok")){
+				if(resultData.getInteger("status") == 1){
 					JSONObject json = new JSONObject();
 			        json.put("tenantId", tenantId);
 			        json.put("resCode", "livecloud");
