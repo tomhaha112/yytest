@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="live-yonyoucloud:war">
+    <output-path>$PROJECT_DIR$/live-yonyoucloud/target</output-path>
+    <root id="archive" name="live-yonyoucloud.war">
+      <element id="artifact" artifact-name="live-yonyoucloud:war exploded" />
+    </root>
+  </artifact>
+</component>

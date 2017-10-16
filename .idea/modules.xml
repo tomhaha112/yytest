@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/sign-sdk/sign-sdk.iml" filepath="$PROJECT_DIR$/sign-sdk/sign-sdk.iml" />
+      <module fileurl="file://$PROJECT_DIR$/sign-yonyoucloud/sign-yonyoucloud.iml" filepath="$PROJECT_DIR$/sign-yonyoucloud/sign-yonyoucloud.iml" />
+      <module fileurl="file://$PROJECT_DIR$/signcloud-parent.iml" filepath="$PROJECT_DIR$/signcloud-parent.iml" />
+      <module fileurl="file://$PROJECT_DIR$/signcloud-sdk/signcloud-sdk.iml" filepath="$PROJECT_DIR$/signcloud-sdk/signcloud-sdk.iml" />
+      <module fileurl="file://$PROJECT_DIR$/signcloud-service/signcloud-service.iml" filepath="$PROJECT_DIR$/signcloud-service/signcloud-service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/signcloud-web/signcloud-web.iml" filepath="$PROJECT_DIR$/signcloud-web/signcloud-web.iml" />
+      <module fileurl="file://$PROJECT_DIR$/signcloud-server/signcloud_server.iml" filepath="$PROJECT_DIR$/signcloud-server/signcloud_server.iml" />
+    </modules>
+  </component>
+</project>

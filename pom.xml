@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
-  <groupId>com.yonyou.live</groupId>
-  <artifactId>livecloud-parent</artifactId>
+  <groupId>com.yonyou.sign</groupId>
+  <artifactId>signcloud-parent</artifactId>
   <version>0.0.1-SNAPSHOT</version>
   <packaging>pom</packaging>
    <modules>
-	<module>livecloud-sdk</module>
-	<module>livecloud-service</module>
-	<module>livecloud-server</module>
-	<module>live-sdk</module>
-	<module>livecloud-web</module>
-	<module>live-yonyoucloud</module>
+	<module>signcloud-sdk</module>
+	<module>signcloud-service</module>
+	<module>signcloud-server</module>
+	<module>sign-sdk</module>
+	<module>signcloud-web</module>
+	<module>sign-yonyoucloud</module>
   </modules>
-  <name>livecloud-parent</name>
+  <name>signcloud-parent</name>
   
   <build>
 		<defaultGoal>compile</defaultGoal>

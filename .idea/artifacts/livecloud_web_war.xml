@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="livecloud-web:war">
+    <output-path>$PROJECT_DIR$/livecloud-web/target</output-path>
+    <root id="archive" name="livecloud-web.war">
+      <element id="artifact" artifact-name="livecloud-web:war exploded" />
+    </root>
+  </artifact>
+</component>

@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Maven: com.yonyou.iuap:iuap-tenant-cas:1.2.0-SNAPSHOT">
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/com/yonyou/iuap/iuap-tenant-cas/1.2.0-SNAPSHOT/iuap-tenant-cas-1.2.0-20170621.084951-4.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$MAVEN_REPOSITORY$/com/yonyou/iuap/iuap-tenant-cas/1.2.0-SNAPSHOT/iuap-tenant-cas-1.2.0-20170621.084951-4-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$MAVEN_REPOSITORY$/com/yonyou/iuap/iuap-tenant-cas/1.2.0-SNAPSHOT/iuap-tenant-cas-1.2.0-20170621.084951-4-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

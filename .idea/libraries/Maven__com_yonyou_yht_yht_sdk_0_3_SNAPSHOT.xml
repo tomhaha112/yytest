@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Maven: com.yonyou.yht:yht-sdk:0.3-SNAPSHOT">
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/com/yonyou/yht/yht-sdk/0.3-SNAPSHOT/yht-sdk-0.3-20171009.061414-32.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$MAVEN_REPOSITORY$/com/yonyou/yht/yht-sdk/0.3-SNAPSHOT/yht-sdk-0.3-20171009.061414-32-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$MAVEN_REPOSITORY$/com/yonyou/yht/yht-sdk/0.3-SNAPSHOT/yht-sdk-0.3-20171009.061414-32-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

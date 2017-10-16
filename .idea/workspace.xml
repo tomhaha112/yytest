@@ -1,0 +1,1261 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="759b46c0-85a0-4330-9a3e-9505c91883a6" name="Default" comment="">
+      <change type="DELETED" beforePath="$PROJECT_DIR$/live-sdk/target/.gitignore" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/livecloud-server/.settings/.jsdtscope" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/livecloud-server/.settings/org.eclipse.wst.common.component" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/livecloud-server/.settings/org.eclipse.wst.common.project.facet.core.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/livecloud-service/.settings/.gitignore" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/livecloud-web/.settings/org.eclipse.wst.jsdt.ui.superType.container" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/livecloud-web/.settings/org.eclipse.wst.jsdt.ui.superType.name" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/livecloud-web/.settings/org.eclipse.wst.validation.prefs" afterPath="" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/live-sdk/.classpath" afterPath="$PROJECT_DIR$/sign-sdk/.classpath" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/live-sdk/.gitignore" afterPath="$PROJECT_DIR$/sign-sdk/.gitignore" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/live-sdk/.project" afterPath="$PROJECT_DIR$/sign-sdk/.project" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/live-sdk/.settings/.gitignore" afterPath="$PROJECT_DIR$/sign-sdk/.settings/.gitignore" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/live-sdk/.settings/org.eclipse.wst.common.component" afterPath="$PROJECT_DIR$/sign-sdk/.settings/org.eclipse.wst.common.component" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/live-sdk/.settings/org.eclipse.wst.common.project.facet.core.xml" afterPath="$PROJECT_DIR$/sign-sdk/.settings/org.eclipse.wst.common.project.facet.core.xml" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/live-sdk/.settings/org.eclipse.wst.validation.prefs" afterPath="$PROJECT_DIR$/sign-sdk/.settings/org.eclipse.wst.validation.prefs" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/live-sdk/pom.xml" afterPath="$PROJECT_DIR$/sign-sdk/pom.xml" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/live-sdk/src/main/java/com/yonyou/live/sdk/App.java" afterPath="$PROJECT_DIR$/sign-sdk/src/main/java/com/yonyou/live/sdk/App.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/live-sdk/src/main/java/com/yonyou/live/sdk/service/LiveRemotService.java" afterPath="$PROJECT_DIR$/sign-sdk/src/main/java/com/yonyou/live/sdk/service/LiveRemotService.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/live-sdk/src/test/java/com/yonyou/live/sdk/AppTest.java" afterPath="$PROJECT_DIR$/sign-sdk/src/test/java/com/yonyou/live/sdk/AppTest.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/live-yonyoucloud/.classpath" afterPath="$PROJECT_DIR$/sign-yonyoucloud/.classpath" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/live-yonyoucloud/.gitignore" afterPath="$PROJECT_DIR$/sign-yonyoucloud/.gitignore" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/live-yonyoucloud/.project" afterPath="$PROJECT_DIR$/signcloud-server/.project" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/live-yonyoucloud/.settings/.jsdtscope" afterPath="$PROJECT_DIR$/sign-yonyoucloud/.settings/.jsdtscope" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/live-yonyoucloud/.settings/org.eclipse.core.resources.prefs" afterPath="$PROJECT_DIR$/sign-yonyoucloud/.settings/org.eclipse.core.resources.prefs" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/live-yonyoucloud/.settings/org.eclipse.jdt.core.prefs" afterPath="$PROJECT_DIR$/sign-yonyoucloud/.settings/org.eclipse.jdt.core.prefs" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/live-yonyoucloud/.settings/org.eclipse.m2e.core.prefs" afterPath="$PROJECT_DIR$/sign-yonyoucloud/.settings/org.eclipse.m2e.core.prefs" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/live-yonyoucloud/.settings/org.eclipse.wst.common.component" afterPath="$PROJECT_DIR$/sign-yonyoucloud/.settings/org.eclipse.wst.common.component" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/live-yonyoucloud/.settings/org.eclipse.wst.common.project.facet.core.xml" afterPath="$PROJECT_DIR$/sign-yonyoucloud/.settings/org.eclipse.wst.common.project.facet.core.xml" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/live-yonyoucloud/.settings/org.eclipse.wst.jsdt.ui.superType.container" afterPath="$PROJECT_DIR$/sign-yonyoucloud/.settings/org.eclipse.wst.jsdt.ui.superType.container" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/live-yonyoucloud/.settings/org.eclipse.wst.jsdt.ui.superType.name" afterPath="$PROJECT_DIR$/sign-yonyoucloud/.settings/org.eclipse.wst.jsdt.ui.superType.name" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/live-yonyoucloud/.settings/org.eclipse.wst.validation.prefs" afterPath="$PROJECT_DIR$/sign-yonyoucloud/.settings/org.eclipse.wst.validation.prefs" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/live-yonyoucloud/pom.xml" afterPath="$PROJECT_DIR$/sign-yonyoucloud/pom.xml" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/live-yonyoucloud/resources/application.properties" afterPath="$PROJECT_DIR$/sign-yonyoucloud/resources/application.properties" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/live-yonyoucloud/resources/sdk.properties" afterPath="$PROJECT_DIR$/sign-yonyoucloud/resources/sdk.properties" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/live-yonyoucloud/src/main/java/com/yonyou/live/controller/LiveController.java" afterPath="$PROJECT_DIR$/sign-yonyoucloud/src/main/java/com/yonyou/live/controller/LiveController.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/live-yonyoucloud/src/main/java/com/yonyou/live/controller/RedirectController.java" afterPath="$PROJECT_DIR$/sign-yonyoucloud/src/main/java/com/yonyou/live/controller/RedirectController.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/live-yonyoucloud/src/main/package/config-dev.properties" afterPath="$PROJECT_DIR$/sign-yonyoucloud/src/main/package/config-dev.properties" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/live-yonyoucloud/src/main/package/config-real.properties" afterPath="$PROJECT_DIR$/sign-yonyoucloud/src/main/package/config-real.properties" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/live-yonyoucloud/src/main/package/config-test.properties" afterPath="$PROJECT_DIR$/sign-yonyoucloud/src/main/package/config-test.properties" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/live-yonyoucloud/src/main/webapp/WEB-INF/real/authfile.txt" afterPath="$PROJECT_DIR$/sign-yonyoucloud/src/main/webapp/WEB-INF/real/authfile.txt" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/live-yonyoucloud/src/main/webapp/WEB-INF/spring-beans.xml" afterPath="$PROJECT_DIR$/sign-yonyoucloud/src/main/webapp/WEB-INF/spring-beans.xml" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/live-yonyoucloud/src/main/webapp/WEB-INF/spring-context.xml" afterPath="$PROJECT_DIR$/sign-yonyoucloud/src/main/webapp/WEB-INF/spring-context.xml" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/live-yonyoucloud/src/main/webapp/WEB-INF/spring-logback.xml" afterPath="$PROJECT_DIR$/sign-yonyoucloud/src/main/webapp/WEB-INF/spring-logback.xml" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/live-yonyoucloud/src/main/webapp/WEB-INF/spring-servlet.xml" afterPath="$PROJECT_DIR$/sign-yonyoucloud/src/main/webapp/WEB-INF/spring-servlet.xml" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/live-yonyoucloud/src/main/webapp/WEB-INF/test/authfile.txt" afterPath="$PROJECT_DIR$/sign-yonyoucloud/src/main/webapp/WEB-INF/test/authfile.txt" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/live-yonyoucloud/src/main/webapp/WEB-INF/web.xml" afterPath="$PROJECT_DIR$/sign-yonyoucloud/src/main/webapp/WEB-INF/web.xml" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/live-yonyoucloud/src/main/webapp/demo.html" afterPath="$PROJECT_DIR$/sign-yonyoucloud/src/main/webapp/demo.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/live-yonyoucloud/src/main/webapp/static/html/index.html" afterPath="$PROJECT_DIR$/sign-yonyoucloud/src/main/webapp/static/html/index.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/live-yonyoucloud/src/main/webapp/static/html/nest.html" afterPath="$PROJECT_DIR$/sign-yonyoucloud/src/main/webapp/static/html/nest.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/live-yonyoucloud/src/main/webapp/static/html/success.html" afterPath="$PROJECT_DIR$/sign-yonyoucloud/src/main/webapp/static/html/success.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/live-yonyoucloud/src/main/webapp/static/scripts/bootstrap.min.js" afterPath="$PROJECT_DIR$/sign-yonyoucloud/src/main/webapp/static/scripts/bootstrap.min.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/live-yonyoucloud/src/main/webapp/static/scripts/jquery-3.2.1.js" afterPath="$PROJECT_DIR$/sign-yonyoucloud/src/main/webapp/static/scripts/jquery-3.2.1.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/live-yonyoucloud/src/main/webapp/static/scripts/main.js" afterPath="$PROJECT_DIR$/sign-yonyoucloud/src/main/webapp/static/scripts/main.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/live-yonyoucloud/src/main/webapp/static/scripts/main_success.js" afterPath="$PROJECT_DIR$/sign-yonyoucloud/src/main/webapp/static/scripts/main_success.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/live-yonyoucloud/src/main/webapp/static/scripts/vue.js" afterPath="$PROJECT_DIR$/sign-yonyoucloud/src/main/webapp/static/scripts/vue.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/live-yonyoucloud/src/main/webapp/static/styles/animate.css" afterPath="$PROJECT_DIR$/sign-yonyoucloud/src/main/webapp/static/styles/animate.css" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/live-yonyoucloud/src/main/webapp/static/styles/bootstrap.min.css" afterPath="$PROJECT_DIR$/sign-yonyoucloud/src/main/webapp/static/styles/bootstrap.min.css" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/livecloud-sdk/.classpath" afterPath="$PROJECT_DIR$/signcloud-sdk/.classpath" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/livecloud-sdk/.gitignore" afterPath="$PROJECT_DIR$/signcloud-sdk/.gitignore" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/livecloud-sdk/.project" afterPath="$PROJECT_DIR$/signcloud-sdk/.project" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/livecloud-sdk/.settings/.gitignore" afterPath="$PROJECT_DIR$/signcloud-sdk/.settings/.gitignore" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/livecloud-sdk/.settings/org.eclipse.wst.common.component" afterPath="$PROJECT_DIR$/signcloud-sdk/.settings/org.eclipse.wst.common.component" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/livecloud-sdk/.settings/org.eclipse.wst.common.project.facet.core.xml" afterPath="$PROJECT_DIR$/signcloud-sdk/.settings/org.eclipse.wst.common.project.facet.core.xml" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/livecloud-sdk/.settings/org.eclipse.wst.validation.prefs" afterPath="$PROJECT_DIR$/signcloud-sdk/.settings/org.eclipse.wst.validation.prefs" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/livecloud-sdk/pom.xml" afterPath="$PROJECT_DIR$/signcloud-sdk/pom.xml" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/livecloud-sdk/src/main/java/com/yonyou/live/broadcast/result/ServiceResult.java" afterPath="$PROJECT_DIR$/signcloud-sdk/src/main/java/com/yonyou/live/broadcast/result/ServiceResult.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/livecloud-sdk/src/main/java/com/yonyou/live/broadcast/result/ServiceResultCode.java" afterPath="$PROJECT_DIR$/signcloud-sdk/src/main/java/com/yonyou/live/broadcast/result/ServiceResultCode.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/livecloud-sdk/src/main/java/com/yonyou/live/broadcast/sdk/App.java" afterPath="$PROJECT_DIR$/signcloud-sdk/src/main/java/com/yonyou/live/broadcast/sdk/App.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/livecloud-sdk/src/main/java/com/yonyou/live/broadcast/sdk/model/LiveAuthEntity.java" afterPath="$PROJECT_DIR$/signcloud-sdk/src/main/java/com/yonyou/live/broadcast/sdk/model/LiveAuthEntity.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/livecloud-sdk/src/main/java/com/yonyou/live/broadcast/sdk/model/LiveTenantEntity.java" afterPath="$PROJECT_DIR$/signcloud-sdk/src/main/java/com/yonyou/live/broadcast/sdk/model/LiveTenantEntity.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/livecloud-sdk/src/main/java/com/yonyou/live/broadcast/sdk/remote/service/LiveService.java" afterPath="$PROJECT_DIR$/signcloud-sdk/src/main/java/com/yonyou/live/broadcast/sdk/remote/service/LiveService.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/livecloud-sdk/src/main/java/com/yonyou/live/broadcast/sdk/service/LiveAuthService.java" afterPath="$PROJECT_DIR$/signcloud-sdk/src/main/java/com/yonyou/live/broadcast/sdk/service/LiveAuthService.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/livecloud-sdk/src/main/java/com/yonyou/live/broadcast/sdk/service/LiveRoomService.java" afterPath="$PROJECT_DIR$/signcloud-sdk/src/main/java/com/yonyou/live/broadcast/sdk/service/LiveRoomService.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/livecloud-sdk/src/test/java/com/yonyou/live/broadcast/sdk/AppTest.java" afterPath="$PROJECT_DIR$/signcloud-sdk/src/test/java/com/yonyou/live/broadcast/sdk/AppTest.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/livecloud-server/.classpath" afterPath="$PROJECT_DIR$/signcloud-server/.classpath" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/livecloud-server/.gitignore" afterPath="$PROJECT_DIR$/signcloud-server/.gitignore" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/livecloud-server/.project" afterPath="$PROJECT_DIR$/sign-yonyoucloud/.project" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/livecloud-server/.settings/.gitignore" afterPath="$PROJECT_DIR$/signcloud-service/.settings/.gitignore" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/livecloud-server/.settings/org.eclipse.wst.jsdt.ui.superType.container" afterPath="$PROJECT_DIR$/signcloud-web/.settings/org.eclipse.wst.jsdt.ui.superType.container" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/livecloud-server/.settings/org.eclipse.wst.jsdt.ui.superType.name" afterPath="$PROJECT_DIR$/signcloud-web/.settings/org.eclipse.wst.jsdt.ui.superType.name" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/livecloud-server/.settings/org.eclipse.wst.validation.prefs" afterPath="$PROJECT_DIR$/signcloud-service/.settings/org.eclipse.wst.validation.prefs" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/livecloud-server/pom.xml" afterPath="$PROJECT_DIR$/signcloud-server/pom.xml" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/livecloud-server/resources/application.properties" afterPath="$PROJECT_DIR$/signcloud-server/resources/application.properties" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/livecloud-server/resources/sdk.properties" afterPath="$PROJECT_DIR$/signcloud-server/resources/sdk.properties" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/livecloud-server/src/main/java/com/yonyou/live/broadcast/controller/LiveAdminController.java" afterPath="$PROJECT_DIR$/signcloud-server/src/main/java/com/yonyou/live/broadcast/controller/LiveAdminController.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/livecloud-server/src/main/java/com/yonyou/live/broadcast/controller/LiveController.java" afterPath="$PROJECT_DIR$/signcloud-server/src/main/java/com/yonyou/live/broadcast/controller/LiveController.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/livecloud-server/src/main/java/com/yonyou/live/broadcast/interceptor/LiveServiceInvokerInterceptor.java" afterPath="$PROJECT_DIR$/signcloud-server/src/main/java/com/yonyou/live/broadcast/interceptor/LiveServiceInvokerInterceptor.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/livecloud-server/src/main/java/com/yonyou/live/broadcast/server/App.java" afterPath="$PROJECT_DIR$/signcloud-server/src/main/java/com/yonyou/live/broadcast/server/App.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/livecloud-server/src/main/java/com/yonyou/live/broadcast/util/ExcelReader.java" afterPath="$PROJECT_DIR$/signcloud-server/src/main/java/com/yonyou/live/broadcast/util/ExcelReader.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/livecloud-server/src/main/java/com/yonyou/live/broadcast/util/HttpUtils.java" afterPath="$PROJECT_DIR$/signcloud-server/src/main/java/com/yonyou/live/broadcast/util/HttpUtils.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/livecloud-server/src/main/java/com/yonyou/live/broadcast/util/MD5Utils.java" afterPath="$PROJECT_DIR$/signcloud-server/src/main/java/com/yonyou/live/broadcast/util/MD5Utils.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/livecloud-server/src/main/package/config-dev.properties" afterPath="$PROJECT_DIR$/signcloud-server/src/main/package/config-dev.properties" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/livecloud-server/src/main/package/config-real.properties" afterPath="$PROJECT_DIR$/signcloud-server/src/main/package/config-real.properties" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/livecloud-server/src/main/package/config-test.properties" afterPath="$PROJECT_DIR$/signcloud-server/src/main/package/config-test.properties" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/livecloud-server/src/main/webapp/WEB-INF/jsp/index.jsp" afterPath="$PROJECT_DIR$/signcloud-server/src/main/webapp/WEB-INF/jsp/index.jsp" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/livecloud-server/src/main/webapp/WEB-INF/mybatis-config.xml" afterPath="$PROJECT_DIR$/signcloud-server/src/main/webapp/WEB-INF/mybatis-config.xml" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/livecloud-server/src/main/webapp/WEB-INF/real/authfile.txt" afterPath="$PROJECT_DIR$/signcloud-server/src/main/webapp/WEB-INF/real/authfile.txt" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/livecloud-server/src/main/webapp/WEB-INF/spring-beans.xml" afterPath="$PROJECT_DIR$/signcloud-server/src/main/webapp/WEB-INF/spring-beans.xml" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/livecloud-server/src/main/webapp/WEB-INF/spring-context.xml" afterPath="$PROJECT_DIR$/signcloud-server/src/main/webapp/WEB-INF/spring-context.xml" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/livecloud-server/src/main/webapp/WEB-INF/spring-dao.xml" afterPath="$PROJECT_DIR$/signcloud-server/src/main/webapp/WEB-INF/spring-dao.xml" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/livecloud-server/src/main/webapp/WEB-INF/spring-jdbc.xml" afterPath="$PROJECT_DIR$/signcloud-server/src/main/webapp/WEB-INF/spring-jdbc.xml" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/livecloud-server/src/main/webapp/WEB-INF/spring-logback.xml" afterPath="$PROJECT_DIR$/signcloud-server/src/main/webapp/WEB-INF/spring-logback.xml" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/livecloud-server/src/main/webapp/WEB-INF/spring-servlet.xml" afterPath="$PROJECT_DIR$/signcloud-server/src/main/webapp/WEB-INF/spring-servlet.xml" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/livecloud-server/src/main/webapp/WEB-INF/test/authfile.txt" afterPath="$PROJECT_DIR$/signcloud-server/src/main/webapp/WEB-INF/test/authfile.txt" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/livecloud-server/src/main/webapp/WEB-INF/web.xml" afterPath="$PROJECT_DIR$/signcloud-server/src/main/webapp/WEB-INF/web.xml" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/livecloud-service/.classpath" afterPath="$PROJECT_DIR$/signcloud-service/.classpath" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/livecloud-service/.gitignore" afterPath="$PROJECT_DIR$/signcloud-service/.gitignore" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/livecloud-service/.project" afterPath="$PROJECT_DIR$/signcloud-service/.project" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/livecloud-service/.settings/org.eclipse.wst.common.component" afterPath="$PROJECT_DIR$/signcloud-service/.settings/org.eclipse.wst.common.component" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/livecloud-service/.settings/org.eclipse.wst.common.project.facet.core.xml" afterPath="$PROJECT_DIR$/signcloud-service/.settings/org.eclipse.wst.common.project.facet.core.xml" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/livecloud-service/.settings/org.eclipse.wst.validation.prefs" afterPath="$PROJECT_DIR$/signcloud-web/.settings/org.eclipse.wst.validation.prefs" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/livecloud-service/pom.xml" afterPath="$PROJECT_DIR$/signcloud-service/pom.xml" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/livecloud-service/src/main/java/com/yonyou/live/App.java" afterPath="$PROJECT_DIR$/signcloud-service/src/main/java/com/yonyou/live/App.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/livecloud-service/src/main/java/com/yonyou/live/broadcast/dao/LiveAuthDao.java" afterPath="$PROJECT_DIR$/signcloud-service/src/main/java/com/yonyou/live/broadcast/dao/LiveAuthDao.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/livecloud-service/src/main/java/com/yonyou/live/broadcast/dao/LiveRoomDao.java" afterPath="$PROJECT_DIR$/signcloud-service/src/main/java/com/yonyou/live/broadcast/dao/LiveRoomDao.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/livecloud-service/src/main/java/com/yonyou/live/broadcast/mapper/LiveAuthMapper.xml" afterPath="$PROJECT_DIR$/signcloud-service/src/main/java/com/yonyou/live/broadcast/mapper/LiveAuthMapper.xml" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/livecloud-service/src/main/java/com/yonyou/live/broadcast/mapper/LiveRoomMapper.xml" afterPath="$PROJECT_DIR$/signcloud-service/src/main/java/com/yonyou/live/broadcast/mapper/LiveRoomMapper.xml" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/livecloud-service/src/main/java/com/yonyou/live/broadcast/service/impl/LiveAuthServiceImpl.java" afterPath="$PROJECT_DIR$/signcloud-service/src/main/java/com/yonyou/live/broadcast/service/impl/LiveAuthServiceImpl.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/livecloud-service/src/main/java/com/yonyou/live/broadcast/service/impl/LiveRoomServiceImpl.java" afterPath="$PROJECT_DIR$/signcloud-service/src/main/java/com/yonyou/live/broadcast/service/impl/LiveRoomServiceImpl.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/livecloud-service/src/test/java/com/yonyou/live/AppTest.java" afterPath="$PROJECT_DIR$/signcloud-service/src/test/java/com/yonyou/live/AppTest.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/livecloud-web/.classpath" afterPath="$PROJECT_DIR$/signcloud-web/.classpath" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/livecloud-web/.gitignore" afterPath="$PROJECT_DIR$/signcloud-web/.gitignore" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/livecloud-web/.project" afterPath="$PROJECT_DIR$/signcloud-web/.project" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/livecloud-web/.settings/.jsdtscope" afterPath="$PROJECT_DIR$/signcloud-web/.settings/.jsdtscope" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/livecloud-web/.settings/org.eclipse.core.resources.prefs" afterPath="$PROJECT_DIR$/signcloud-web/.settings/org.eclipse.core.resources.prefs" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/livecloud-web/.settings/org.eclipse.jdt.core.prefs" afterPath="$PROJECT_DIR$/signcloud-web/.settings/org.eclipse.jdt.core.prefs" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/livecloud-web/.settings/org.eclipse.m2e.core.prefs" afterPath="$PROJECT_DIR$/signcloud-web/.settings/org.eclipse.m2e.core.prefs" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/livecloud-web/.settings/org.eclipse.wst.common.component" afterPath="$PROJECT_DIR$/signcloud-web/.settings/org.eclipse.wst.common.component" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/livecloud-web/.settings/org.eclipse.wst.common.project.facet.core.xml" afterPath="$PROJECT_DIR$/signcloud-web/.settings/org.eclipse.wst.common.project.facet.core.xml" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/livecloud-web/pom.xml" afterPath="$PROJECT_DIR$/signcloud-web/pom.xml" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/livecloud-web/src/main/java/com/yonyou/live/test/TestController.java" afterPath="$PROJECT_DIR$/signcloud-web/src/main/java/com/yonyou/live/test/TestController.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/livecloud-web/src/main/package/config-dev.properties" afterPath="$PROJECT_DIR$/signcloud-web/src/main/package/config-dev.properties" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/livecloud-web/src/main/package/config-real.properties" afterPath="$PROJECT_DIR$/signcloud-web/src/main/package/config-real.properties" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/livecloud-web/src/main/package/config-test.properties" afterPath="$PROJECT_DIR$/signcloud-web/src/main/package/config-test.properties" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/livecloud-web/src/main/resources/application.properties" afterPath="$PROJECT_DIR$/signcloud-web/src/main/resources/application.properties" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/livecloud-web/src/main/resources/sdk.properties" afterPath="$PROJECT_DIR$/signcloud-web/src/main/resources/sdk.properties" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/livecloud-web/src/main/webapp/WEB-INF/spring-beans.xml" afterPath="$PROJECT_DIR$/signcloud-web/src/main/webapp/WEB-INF/spring-beans.xml" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/livecloud-web/src/main/webapp/WEB-INF/spring-context.xml" afterPath="$PROJECT_DIR$/signcloud-web/src/main/webapp/WEB-INF/spring-context.xml" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/livecloud-web/src/main/webapp/WEB-INF/spring-servlet.xml" afterPath="$PROJECT_DIR$/signcloud-web/src/main/webapp/WEB-INF/spring-servlet.xml" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/livecloud-web/src/main/webapp/WEB-INF/web.xml" afterPath="$PROJECT_DIR$/signcloud-web/src/main/webapp/WEB-INF/web.xml" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/livecloud-web/src/main/webapp/static/css/demo.css" afterPath="$PROJECT_DIR$/signcloud-web/src/main/webapp/static/css/demo.css" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/livecloud-web/src/main/webapp/static/html/demo.html" afterPath="$PROJECT_DIR$/signcloud-web/src/main/webapp/static/html/demo.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/livecloud-web/src/main/webapp/static/trd/jquery/jquery-1.11.2.js" afterPath="$PROJECT_DIR$/signcloud-web/src/main/webapp/static/trd/jquery/jquery-1.11.2.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/livecloud-web/src/main/webapp/static/trd/jquery/jquery-1.9.1.min.js" afterPath="$PROJECT_DIR$/signcloud-web/src/main/webapp/static/trd/jquery/jquery-1.9.1.min.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/livecloud-web/src/main/webapp/static/trd/jquery/jquery.2.1.4.min.js" afterPath="$PROJECT_DIR$/signcloud-web/src/main/webapp/static/trd/jquery/jquery.2.1.4.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
+    </list>
+    <ignored path="livecloud-parent.iws" />
+    <ignored path=".idea/workspace.xml" />
+    <ignored path="$PROJECT_DIR$/live-yonyoucloud/target/" />
+    <ignored path="$PROJECT_DIR$/livecloud-server/target/" />
+    <ignored path="$PROJECT_DIR$/livecloud-sdk/target/" />
+    <ignored path="$PROJECT_DIR$/target/" />
+    <ignored path="$PROJECT_DIR$/livecloud-service/target/" />
+    <ignored path="$PROJECT_DIR$/live-sdk/target/" />
+    <ignored path="$PROJECT_DIR$/livecloud-web/target/" />
+    <ignored path=".idea/dataSources.local.xml" />
+    <ignored path="$PROJECT_DIR$/signcloud-sdk/target/" />
+    <ignored path="$PROJECT_DIR$/signcloud-web/target/" />
+    <ignored path="$PROJECT_DIR$/signcloud-service/target/" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ChangesViewManager" flattened_view="true" show_ignored="false" />
+  <component name="CreatePatchCommitExecutor">
+    <option name="PATCH_PATH" value="" />
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
+  <component name="FavoritesManager">
+    <favorites_list name="livecloud-parent" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf>
+      <file leaf-file-name="App.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/sign-sdk/src/main/java/com/yonyou/live/sdk/App.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="0" column="19" selection-start-line="0" selection-start-column="19" selection-end-line="0" selection-end-column="19" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="App.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/sign-sdk/src/main/java/com/yonyou/sign/sdk/App.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.21077283">
+              <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="master" />
+      </map>
+    </option>
+  </component>
+  <component name="GradleLocalSettings">
+    <option name="externalProjectsViewState">
+      <projects_view />
+    </option>
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/signcloud-sdk/pom.xml" />
+        <option value="$PROJECT_DIR$/signcloud-sdk/.project" />
+        <option value="$PROJECT_DIR$/livecloud-web/.project" />
+        <option value="$PROJECT_DIR$/signcloud-service/.project" />
+        <option value="$PROJECT_DIR$/signcloud-service/pom.xml" />
+        <option value="$PROJECT_DIR$/livecloud-server/pom.xml" />
+        <option value="$PROJECT_DIR$/livecloud-server/.project" />
+        <option value="$PROJECT_DIR$/live-yonyoucloud/.project" />
+        <option value="$PROJECT_DIR$/live-yonyoucloud/pom.xml" />
+        <option value="$PROJECT_DIR$/live-sdk/pom.xml" />
+        <option value="$PROJECT_DIR$/live-sdk/.project" />
+        <option value="$PROJECT_DIR$/sign-sdk/sign-sdk.iml" />
+        <option value="$PROJECT_DIR$/signcloud-web/pom.xml" />
+        <option value="$PROJECT_DIR$/sign-yonyoucloud/pom.xml" />
+        <option value="$PROJECT_DIR$/signcloud-server/pom.xml" />
+        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/sign-sdk/src/main/java/com/yonyou/live/sdk/App.java" />
+      </list>
+    </option>
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" />
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="localRepository" value="$MAVEN_REPOSITORY$" />
+        <option name="mavenHome" value="Bundled (Maven 3)" />
+        <option name="userSettingsFile" value="$USER_HOME$/Desktop/Nsettings_yonyou.xml" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="MavenProjectNavigator">
+    <treeState>
+      <PATH>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="" />
+          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$RootNode" />
+        </PATH_ELEMENT>
+      </PATH>
+      <PATH>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="" />
+          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$RootNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="signcloud-parent" />
+          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$ProjectNode" />
+        </PATH_ELEMENT>
+      </PATH>
+    </treeState>
+  </component>
+  <component name="NamedScopeManager">
+    <order />
+  </component>
+  <component name="ProjectFrameBounds">
+    <option name="x" value="-1" />
+    <option name="y" value="23" />
+    <option name="width" value="1440" />
+    <option name="height" value="797" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="false">
+    <OptionsSetting value="true" id="Add" />
+    <OptionsSetting value="true" id="Remove" />
+    <OptionsSetting value="true" id="Checkout" />
+    <OptionsSetting value="true" id="Update" />
+    <OptionsSetting value="true" id="Status" />
+    <OptionsSetting value="true" id="Edit" />
+    <ConfirmationsSetting value="0" id="Add" />
+    <ConfirmationsSetting value="0" id="Remove" />
+  </component>
+  <component name="ProjectView">
+    <navigator currentView="ProjectPane" proportions="" version="1">
+      <flattenPackages ProjectPane="true" />
+      <showMembers />
+      <showModules />
+      <showLibraryContents />
+      <hideEmptyPackages />
+      <abbreviatePackageNames />
+      <autoscrollToSource />
+      <autoscrollFromSource />
+      <sortByType />
+    </navigator>
+    <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="livecloud-parent" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="livecloud-parent" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="iuap_signcloud" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="livecloud-parent" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="iuap_signcloud" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="signcloud-web" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="livecloud-parent" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="iuap_signcloud" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="signcloud-service" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="livecloud-parent" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="iuap_signcloud" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="signcloud-server" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="livecloud-parent" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="iuap_signcloud" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="sign-sdk" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="livecloud-parent" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="iuap_signcloud" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="sign-sdk" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="livecloud-parent" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="iuap_signcloud" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="sign-sdk" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="sdk" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="livecloud-parent" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="iuap_signcloud" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="sign-sdk" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="service" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="livecloud-parent" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="iuap_signcloud" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="sign-sdk" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="sdk" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
+      <pane id="PackagesPane" />
+      <pane id="Scratches" />
+      <pane id="Scope" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="settings.editor.selected.configurable" value="MavenSettings" />
+    <property name="settings.editor.splitter.proportion" value="0.2" />
+    <property name="project.structure.last.edited" value="Global Libraries" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="FullScreen" value="false" />
+    <property name="dynamic.classpath" value="false" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.yonyou.sign.sdk" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin">
+      <module name="" />
+      <option name="VM_PARAMETERS" value="-Xmx512m -Xms256m -XX:MaxPermSize=250m -ea" />
+      <option name="PROGRAM_PARAMETERS" />
+      <method />
+    </configuration>
+    <configuration default="true" type="AndroidRunConfigurationType" factoryName="Android Application">
+      <module name="" />
+      <option name="ACTIVITY_CLASS" value="" />
+      <option name="MODE" value="default_activity" />
+      <option name="DEPLOY" value="true" />
+      <option name="ARTIFACT_NAME" value="" />
+      <option name="TARGET_SELECTION_MODE" value="EMULATOR" />
+      <option name="USE_LAST_SELECTED_DEVICE" value="false" />
+      <option name="PREFERRED_AVD" value="" />
+      <option name="USE_COMMAND_LINE" value="true" />
+      <option name="COMMAND_LINE" value="" />
+      <option name="WIPE_USER_DATA" value="false" />
+      <option name="DISABLE_BOOT_ANIMATION" value="false" />
+      <option name="NETWORK_SPEED" value="full" />
+      <option name="NETWORK_LATENCY" value="none" />
+      <option name="CLEAR_LOGCAT" value="false" />
+      <option name="SHOW_LOGCAT_AUTOMATICALLY" value="true" />
+      <option name="FILTER_LOGCAT_AUTOMATICALLY" value="true" />
+      <method />
+    </configuration>
+    <configuration default="true" type="AndroidTestRunConfigurationType" factoryName="Android Tests">
+      <module name="" />
+      <option name="TESTING_TYPE" value="0" />
+      <option name="INSTRUMENTATION_RUNNER_CLASS" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="CLASS_NAME" value="" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="TARGET_SELECTION_MODE" value="EMULATOR" />
+      <option name="USE_LAST_SELECTED_DEVICE" value="false" />
+      <option name="PREFERRED_AVD" value="" />
+      <option name="USE_COMMAND_LINE" value="true" />
+      <option name="COMMAND_LINE" value="" />
+      <option name="WIPE_USER_DATA" value="false" />
+      <option name="DISABLE_BOOT_ANIMATION" value="false" />
+      <option name="NETWORK_SPEED" value="full" />
+      <option name="NETWORK_LATENCY" value="none" />
+      <option name="CLEAR_LOGCAT" value="false" />
+      <option name="SHOW_LOGCAT_AUTOMATICALLY" value="true" />
+      <option name="FILTER_LOGCAT_AUTOMATICALLY" value="true" />
+      <method />
+    </configuration>
+    <configuration default="true" type="Applet" factoryName="Applet">
+      <option name="WIDTH" value="400" />
+      <option name="HEIGHT" value="300" />
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <module />
+      <method />
+    </configuration>
+    <configuration default="true" type="Application" factoryName="Application">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <option name="myFilePath" />
+      <option name="GLUE" />
+      <option name="myNameFilter" />
+      <option name="myGeneratedName" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="FlashRunConfigurationType" factoryName="Flash App">
+      <option name="BCName" value="" />
+      <option name="IOSSimulatorSdkPath" value="" />
+      <option name="adlOptions" value="" />
+      <option name="airProgramParameters" value="" />
+      <option name="appDescriptorForEmulator" value="Android" />
+      <option name="debugTransport" value="USB" />
+      <option name="debuggerSdkRaw" value="BC SDK" />
+      <option name="emulator" value="NexusOne" />
+      <option name="emulatorAdlOptions" value="" />
+      <option name="fastPackaging" value="true" />
+      <option name="fullScreenHeight" value="0" />
+      <option name="fullScreenWidth" value="0" />
+      <option name="launchUrl" value="false" />
+      <option name="launcherParameters">
+        <LauncherParameters>
+          <option name="browser" value="a7bb68e0-33c0-4d6f-a81a-aac1fdb870c8" />
+          <option name="launcherType" value="OSDefault" />
+          <option name="newPlayerInstance" value="false" />
+          <option name="playerPath" value="/Applications/Flash Player Debugger.app" />
+        </LauncherParameters>
+      </option>
+      <option name="mobileRunTarget" value="Emulator" />
+      <option name="moduleName" value="" />
+      <option name="overriddenMainClass" value="" />
+      <option name="overriddenOutputFileName" value="" />
+      <option name="overrideMainClass" value="false" />
+      <option name="runTrusted" value="true" />
+      <option name="screenDpi" value="0" />
+      <option name="screenHeight" value="0" />
+      <option name="screenWidth" value="0" />
+      <option name="url" value="http://" />
+      <option name="usbDebugPort" value="7936" />
+      <method />
+    </configuration>
+    <configuration default="true" type="FlexUnitRunConfigurationType" factoryName="FlexUnit" appDescriptorForEmulator="Android" class_name="" emulatorAdlOptions="" method_name="" package_name="" scope="Class">
+      <option name="BCName" value="" />
+      <option name="launcherParameters">
+        <LauncherParameters>
+          <option name="browser" value="a7bb68e0-33c0-4d6f-a81a-aac1fdb870c8" />
+          <option name="launcherType" value="OSDefault" />
+          <option name="newPlayerInstance" value="false" />
+          <option name="playerPath" value="/Applications/Flash Player Debugger.app" />
+        </LauncherParameters>
+      </option>
+      <option name="moduleName" value="" />
+      <option name="trusted" value="true" />
+      <method />
+    </configuration>
+    <configuration default="true" type="GradleRunConfiguration" factoryName="Gradle">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list />
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <method />
+    </configuration>
+    <configuration default="true" type="GrailsRunConfigurationType" factoryName="Grails">
+      <module name="" />
+      <setting name="vmparams" value="" />
+      <setting name="cmdLine" value="run-app" />
+      <setting name="depsClasspath" value="false" />
+      <setting name="passParentEnv" value="true" />
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <setting name="launchBrowser" value="false" />
+      <method />
+    </configuration>
+    <configuration default="true" type="JUnit" factoryName="JUnit">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+      <method />
+    </configuration>
+    <configuration default="true" type="JarApplication" factoryName="JAR Application">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug">
+      <method />
+    </configuration>
+    <configuration default="true" type="MavenRunConfiguration" factoryName="Maven">
+      <MavenSettings>
+        <option name="myGeneralSettings" />
+        <option name="myRunnerSettings" />
+        <option name="myRunnerParameters">
+          <MavenRunnerParameters>
+            <option name="profiles">
+              <set />
+            </option>
+            <option name="goals">
+              <list />
+            </option>
+            <option name="profilesMap">
+              <map />
+            </option>
+            <option name="resolveToWorkspace" value="false" />
+            <option name="workingDirPath" value="" />
+          </MavenRunnerParameters>
+        </option>
+      </MavenSettings>
+      <method />
+    </configuration>
+    <configuration default="true" type="Remote" factoryName="Remote">
+      <option name="USE_SOCKET_TRANSPORT" value="true" />
+      <option name="SERVER_MODE" value="false" />
+      <option name="SHMEM_ADDRESS" value="javadebug" />
+      <option name="HOST" value="localhost" />
+      <option name="PORT" value="5005" />
+      <method />
+    </configuration>
+    <configuration default="true" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="TestNG" factoryName="TestNG">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="SUITE_NAME" />
+      <option name="PACKAGE_NAME" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
+      <option name="GROUP_NAME" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="OUTPUT_DIRECTORY" />
+      <option name="ANNOTATION_TYPE" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <option name="USE_DEFAULT_REPORTERS" value="false" />
+      <option name="PROPERTIES_FILE" />
+      <envs />
+      <properties />
+      <listeners />
+      <method />
+    </configuration>
+    <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
+      <node-options />
+      <gulpfile />
+      <tasks />
+      <arguments />
+      <pass-parent-envs>true</pass-parent-envs>
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="osgi.bnd.run" factoryName="Run Launcher">
+      <method />
+    </configuration>
+    <configuration default="true" type="osgi.bnd.run" factoryName="Test Launcher (JUnit)">
+      <method />
+    </configuration>
+  </component>
+  <component name="ShelveChangesManager" show_recycled="false" />
+  <component name="SvnConfiguration">
+    <configuration>$USER_HOME$/.subversion</configuration>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="759b46c0-85a0-4330-9a3e-9505c91883a6" name="Default" comment="" />
+      <created>1507532734413</created>
+      <option name="number" value="Default" />
+      <updated>1507532734413</updated>
+      <workItem from="1507532735990" duration="379000" />
+      <workItem from="1507533131338" duration="1868000" />
+      <workItem from="1507600127641" duration="598000" />
+      <workItem from="1507686195376" duration="598000" />
+      <workItem from="1507865518288" duration="3610000" />
+      <workItem from="1508117896761" duration="428000" />
+      <workItem from="1508118660195" duration="9639000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="17120000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-1" y="23" width="1440" height="797" extended-state="6" />
+    <editor active="false" />
+    <layout>
+      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3297568" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3298969" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="IvyIDEA" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3298969" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24964234" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+    </layout>
+  </component>
+  <component name="Vcs.Log.UiProperties">
+    <option name="RECENTLY_FILTERED_USER_GROUPS">
+      <collection />
+    </option>
+    <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
+      <collection />
+    </option>
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager />
+    <watches-manager />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/signcloud-web/src/main/webapp/WEB-INF/spring-servlet.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/signcloud-web/src/main/webapp/WEB-INF/spring-context.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/signcloud-web/src/main/webapp/WEB-INF/spring-beans.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sign-yonyoucloud/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/signcloud-sdk/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="16" column="44" selection-start-line="16" selection-start-column="21" selection-end-line="16" selection-end-column="44" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sign-sdk/src/main/java/com/yonyou/live/sdk/service/LiveRemotService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/signcloud-server/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="303" column="32" selection-start-line="303" selection-start-column="32" selection-end-line="303" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sign-sdk/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/signcloud-web/src/main/webapp/WEB-INF/web.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/signcloud-web/src/main/webapp/WEB-INF/spring-servlet.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/signcloud-web/src/main/webapp/WEB-INF/spring-context.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/signcloud-web/src/main/webapp/WEB-INF/spring-beans.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sign-yonyoucloud/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/signcloud-sdk/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="16" column="44" selection-start-line="16" selection-start-column="21" selection-end-line="16" selection-end-column="44" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sign-sdk/src/main/java/com/yonyou/live/sdk/service/LiveRemotService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sign-sdk/src/main/java/com/yonyou/live/sdk/App.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sign-sdk/src/main/java/com/yonyou/live/sdk/service/LiveRemotService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/signcloud-sdk/src/main/java/com/yonyou/live/broadcast/result/ServiceResult.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.31615925">
+          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/signcloud-sdk/src/main/java/com/yonyou/live/broadcast/result/ServiceResultCode.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.21077283">
+          <caret line="6" column="12" selection-start-line="6" selection-start-column="12" selection-end-line="6" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sign-yonyoucloud/src/main/java/com/yonyou/live/controller/RedirectController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.52693206">
+          <caret line="15" column="42" selection-start-line="15" selection-start-column="42" selection-end-line="15" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sign-sdk/src/main/java/com/yonyou/live/sdk/service/LiveRemotService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/signcloud-web/src/main/webapp/WEB-INF/web.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/signcloud-web/src/main/webapp/WEB-INF/spring-servlet.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/signcloud-web/src/main/webapp/WEB-INF/spring-context.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/signcloud-web/src/main/webapp/WEB-INF/spring-beans.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="15" column="8" selection-start-line="15" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/signcloud-sdk/.classpath">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/signcloud-sdk/.project">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.07025761">
+          <caret line="2" column="14" selection-start-line="2" selection-start-column="14" selection-end-line="2" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.settings/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/signcloud-web/.project">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="2" column="14" selection-start-line="2" selection-start-column="14" selection-end-line="2" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/signcloud-service/.project">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="5" column="15" selection-start-line="5" selection-start-column="15" selection-end-line="5" selection-end-column="15" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/signcloud-server/.project">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="2" column="14" selection-start-line="2" selection-start-column="14" selection-end-line="2" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sign-yonyoucloud/.project">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="2" column="14" selection-start-line="2" selection-start-column="14" selection-end-line="2" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sign-sdk/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="11" column="36" selection-start-line="11" selection-start-column="36" selection-end-line="11" selection-end-column="36" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sign-sdk/.project">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="2" column="14" selection-start-line="2" selection-start-column="14" selection-end-line="2" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sign-sdk/.settings/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/signcloud-sdk/signcloud-sdk.iml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-11.111111">
+          <caret line="28" column="48" selection-start-line="28" selection-start-column="48" selection-end-line="28" selection-end-column="48" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/signcloud-server/signcloud_server.iml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-1.6666666">
+          <caret line="3" column="2" selection-start-line="3" selection-start-column="2" selection-end-line="3" selection-end-column="2" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/signcloud-service/signcloud-service.iml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/signcloud-web/signcloud-web.iml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-3.8888888">
+          <caret line="7" column="18" selection-start-line="7" selection-start-column="18" selection-end-line="7" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/signcloud-parent.iml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-4.9259257">
+          <caret line="34" column="33" selection-start-line="34" selection-start-column="31" selection-end-line="34" selection-end-column="33" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sign-sdk/sign-sdk.iml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-1.6666666">
+          <caret line="3" column="2" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="2" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sign-yonyoucloud/sign-yonyoucloud.iml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-1.5925926">
+          <caret line="16" column="12" selection-start-line="16" selection-start-column="12" selection-end-line="16" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/signcloud-sdk/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="20" column="16" selection-start-line="20" selection-start-column="16" selection-end-line="20" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.75">
+          <caret line="20" column="21" selection-start-line="20" selection-start-column="21" selection-end-line="20" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/signcloud-server/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.82">
+          <caret line="290" column="33" selection-start-line="290" selection-start-column="33" selection-end-line="290" selection-end-column="33" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/signcloud-service/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.3325">
+          <caret line="31" column="30" selection-start-line="31" selection-start-column="29" selection-end-line="31" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/signcloud-web/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.5575">
+          <caret line="108" column="50" selection-start-line="108" selection-start-column="50" selection-end-line="108" selection-end-column="50" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sign-yonyoucloud/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.3325">
+          <caret line="77" column="28" selection-start-line="77" selection-start-column="26" selection-end-line="77" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sign-sdk/src/main/java/com/yonyou/live/sdk/App.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="19" selection-start-line="0" selection-start-column="19" selection-end-line="0" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sign-sdk/src/main/java/com/yonyou/sign/sdk/App.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.21077283">
+          <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>

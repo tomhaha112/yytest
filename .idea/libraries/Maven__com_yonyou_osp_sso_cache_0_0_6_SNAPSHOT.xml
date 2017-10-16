@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Maven: com.yonyou.osp:sso-cache:0.0.6-SNAPSHOT">
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/com/yonyou/osp/sso-cache/0.0.6-SNAPSHOT/sso-cache-0.0.6-20170601.041833-22.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$MAVEN_REPOSITORY$/com/yonyou/osp/sso-cache/0.0.6-SNAPSHOT/sso-cache-0.0.6-20170601.041833-22-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$MAVEN_REPOSITORY$/com/yonyou/osp/sso-cache/0.0.6-SNAPSHOT/sso-cache-0.0.6-20170601.041833-22-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>
